@@ -16,6 +16,28 @@ body {
 }
 img {
     margin:0;
-    width: 1855px;
+    width: 100%;
 
+}
+nav{
+    height: 80px;
+    position: relative;
+}
+.menu {
+    list-style-type: none;
+    position: absolute;
+    right: 50px;
+}
+.menu li {
+    display: inline;
+    float: left;
+
+}
+.menu li a {
+    display: block;
+    padding: 10px;
+    text-align: center;
+    text-decoration: none;
+    font: bold 20px arial;
+    color: #4CAF50;
 }
