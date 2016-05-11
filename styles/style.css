@@ -1,0 +1,21 @@
+.kolor-zielony {
+    background-color: #4CAF50;
+    color: white
+}
+.kolor-szary {
+    background-color: #F4F4F4;
+
+}
+
+
+
+body {
+    margin:0;
+    padding: 0;
+
+}
+img {
+    margin:0;
+    width: 1855px;
+
+}
