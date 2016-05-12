@@ -1,11 +1,12 @@
+.clear {
+    clear: both;
+}
+
+
+
 .kolor-zielony {
     background-color: #4CAF50;
     color: white
-}
-.kolor-szary {
-    background-color: #F4F4F4;
-
-
 }
 
 .funkcje {
@@ -14,12 +15,51 @@
 }
 
 header {
-    background-image: url("../images/logo.png");
+    background-color: #878787;
+    padding: 15px 0;
+}
+
+.logo-funplanner {
+    float: left;
+    color: #ffffff;
+    font-weight: 900;
+    font-size: 30px;
+    text-align: center;
+    background-image: url("../images/logo_funplanner.png");
     background-repeat: no-repeat;
-    background-size: contain;
-    background-position: 0;
-    position: fixed;
-    width: 100%;
+    background-position: top center;
+    width: 180px;
+    padding-top: 55px;
+}
+
+.conteiner {
+    width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+nav {
+    float: right;
+}
+
+nav li {
+    display: inline-block;
+    padding: 0 15px;
+}
+
+nav li a {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 400;
+    font-size: 15px;
+}
+
+nav li a:hover {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 400;
+    font-size: 15px;
+    border-bottom: solid 3px #4CAF50;
 
 }
 
@@ -47,36 +87,6 @@ body {
     margin: 0;
     width: 100%;
 
-}
-nav{
-    height: 55px;
-    position: relative;
-}
-.menu {
-    list-style-type: none;
-    position: absolute;
-    right: 50px;
-}
-.menu li {
-    display: inline;
-    float: left;
-
-
-
-}
-.menu li a {
-    display: block;
-    padding: 10px;
-    text-align: center;
-    text-decoration: none;
-    font: bold 20px arial;
-    color: #4CAF50;
-    transition: transform 1s;
-
-}
-
-.menu li a:hover {
-    transform: scale(1.1);
 }
 
 .formularz {
