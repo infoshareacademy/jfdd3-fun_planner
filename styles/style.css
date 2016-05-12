@@ -14,11 +14,38 @@
 
 }
 
+.logo-kalendarz {
+    float: left;
+    display: inline;
+}
+
+.kalendarz {
+    display: inline;
+    position: relative;
+    float: left;
+}
+
+.logo-powiadomienia {
+    float: left;
+    display: inline;
+}
+
+.powiadomienia {
+    display: inline;
+    position: relative;
+    float: left;
+}
+
+
 header {
     background-color: #878787;
     padding: 15px 0;
 }
 
+main {
+    background-color: white;
+    display: inline;
+}
 .logo-funplanner {
     float: left;
     color: #ffffff;
@@ -32,6 +59,10 @@ header {
     padding-top: 55px;
 }
 
+.funkcje-funplanner {
+    margin-left: 200px;
+    font-size: 120%;
+}
 .conteiner {
     width: 1000px;
     margin-left: auto;
@@ -134,3 +165,8 @@ body {
     color: white;
 }
 
+.stopka {
+    font-size: 80%;
+    text-align: center;
+    height: 25px;
+}
