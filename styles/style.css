@@ -59,7 +59,7 @@ nav li a:hover {
     text-decoration: none;
     font-weight: 400;
     font-size: 15px;
-    border-bottom: solid 3px #4CAF50;
+    border-bottom: solid 3px #4caf50;
 
 }
 
@@ -91,17 +91,46 @@ body {
 
 .formularz {
     height: 500px;
+    background-color: #878787;
 }
 
 .formularz form{
-    width: 240px;
+    width: 400px;
     margin: auto;
-
+    padding: 15px;
+    border-radius: 10px;
+    position: relative;
+    top:35%;
+    background-color: #5e5e5e;
+}
+.formularz form input{
+    display: inline-block;
+    padding: 15px;
+    border: hidden;
+    border-radius: 5px;
+    font-size: large;
+    font-weight: lighter;
+    margin-right: 10px;
+}
+.formularz form button{
+    padding: 15px;
+    background-color: #e3e3e3;
+    border: hidden;
+    border-radius: 5px;
+    font-family: 'Oswald', sans-serif;
+    font-size: large;
+}
+.formularz form button:hover{
+    background-color: #d6d6d6;
 }
 .info {
     width: 500px;
     margin: auto;
-    height: 50px;
     text-align: center;
+    position: relative;
+    top: 35%;
+    font-size:larger;
+    line-height: 1.7;
+    color: white;
 }
 
