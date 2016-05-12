@@ -5,8 +5,13 @@
 .kolor-szary {
     background-color: #F4F4F4;
 
+
 }
 
+.funkcje {
+    -webkit-box-sizing: border-box;
+
+}
 
 
 body {
@@ -14,8 +19,17 @@ body {
     padding: 0;
 
 }
-img {
-    margin:0;
+
+.img {
+    margin-left: 50px;
+    float: left;
+    height: 40px;
+    width: 40px;
+    align: left;
+
+}
+.foto {
+    margin: 0;
     width: 100%;
 
 }
