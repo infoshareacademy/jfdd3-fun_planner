@@ -83,10 +83,14 @@ nav{
 }
 
 .formularz form{
-    width: 300px;
+    width: 240px;
     margin: auto;
-    background-color: red;
 
 }
-
+.info {
+    width: 500px;
+    margin: auto;
+    height: 50px;
+    text-align: center;
+}
 
