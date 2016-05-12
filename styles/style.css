@@ -77,3 +77,16 @@ nav{
 .menu li a:hover {
     transform: scale(1.1);
 }
+
+.formularz {
+    width: 200px;
+    height: 500px;
+    background-color: red;
+    position: fixed;
+    right: 100px;
+    bottom: -480px;
+    transition: bottom 2s;
+}
+.formularz:hover {
+    bottom: 0;
+}
