@@ -18,6 +18,8 @@ header {
     background-repeat: no-repeat;
     background-size: contain;
     background-position: 0;
+    position: fixed;
+    width: 100%;
 
 }
 
@@ -46,7 +48,7 @@ body {
 
 }
 nav{
-    height: 80px;
+    height: 55px;
     position: relative;
 }
 .menu {
@@ -58,6 +60,8 @@ nav{
     display: inline;
     float: left;
 
+
+
 }
 .menu li a {
     display: block;
@@ -67,6 +71,7 @@ nav{
     font: bold 20px arial;
     color: #4CAF50;
     transition: transform 1s;
+
 }
 
 .menu li a:hover {
