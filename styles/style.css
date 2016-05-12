@@ -27,6 +27,11 @@ body {
 
 }
 
+.naglowki {
+    float: left;
+    margin: 10px;
+
+}
 .img {
     margin-left: 50px;
     float: left;
