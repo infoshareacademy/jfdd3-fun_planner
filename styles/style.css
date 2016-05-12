@@ -19,18 +19,13 @@ body {
     padding: 0;
 
 }
-header {
-    background-image: url("../images/logo.png");
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-position-x: 10%;
-}
 
 .img {
     margin-left: 50px;
     float: left;
     height: 40px;
     width: 40px;
+    /*align: left;*/
 
 }
 .foto {
@@ -55,13 +50,8 @@ nav{
 .menu li a {
     display: block;
     padding: 10px;
-    margin:5px;
     text-align: center;
     text-decoration: none;
     font: bold 20px arial;
     color: #4CAF50;
-    transition: transform 1s;
-}
-.menu li a:hover {
-    transform: scale(1.1);
 }
