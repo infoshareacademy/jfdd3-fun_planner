@@ -10,10 +10,6 @@ body {
     clear: both;
 }
 
-.funkcje {
-
-}
-
 .logo-kalendarz {
     float: left;
     display: inline;
@@ -203,6 +199,17 @@ main {
     font-size: 80%;
     text-align: center;
     height: 25px;
+}
+
+.h1 {
+    color: #4caf50;
+}
+
+.lista-funkcji {
+    width: 435px;
+    vertical-align: middle;
+    padding: 10px 30px;
+    display: inline-block;
 }
 
 a{
