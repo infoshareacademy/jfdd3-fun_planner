@@ -2,7 +2,9 @@ body {
     margin:0;
     padding: 0;
     font-family: 'Oswald', sans-serif;
+
     font-size: 20px;
+    letter-spacing: 2px;
     font-weight: 300;
 }
 
@@ -35,7 +37,7 @@ body {
 
 header {
     background-color: #878787;
-    padding: 15px 0;
+    padding: 5px 0;
     position: fixed;
     left:0;
     right:0;
@@ -96,8 +98,8 @@ main {
     background-image: url("../images/fota-glowna.jpeg");
     padding-top: 200px;
     height: 528px;
-    background-size: 100%;
-    background-repeat: no-repeat;
+    background-size: cover;
+
 }
 
 
@@ -109,6 +111,7 @@ main {
     width: 1000px;
     margin: auto;
     text-align: center;
+    font-family: 'Inconsolata', ;
 }
 
 .funkcje-funplanner {
