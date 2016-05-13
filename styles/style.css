@@ -158,6 +158,8 @@ body {
     font-size: large;
     font-weight: lighter;
     margin-right: 10px;
+    text-align: center;
+    font-family: 'Oswald', sans-serif;
 }
 .formularz form button{
     padding: 15px;
@@ -166,14 +168,15 @@ body {
     border-radius: 5px;
     font-family: 'Oswald', sans-serif;
     font-size: large;
+    float: right;
 }
 .formularz form button:hover{
     background-color: #d6d6d6;
 }
 .input{
 
-    height:20px;
-    width: 220px;
+    height:26px;
+    width: 240px;
 
 }
 .info {
