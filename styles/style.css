@@ -41,6 +41,15 @@ header {
     background-color: #878787;
     padding: 15px 0;
 
+
+
+}
+.conteiner {
+    width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+
+
 }
 
 main {
@@ -64,12 +73,7 @@ main {
     margin-left: 200px;
     font-size: 120%;
 }
-.conteiner {
-    width: 1000px;
-    margin-left: auto;
-    margin-right: auto;
 
-}
 
 nav {
     float: right;
@@ -188,6 +192,7 @@ body {
     font-size:larger;
     line-height: 1.7;
     color: white;
+    letter-spacing: 1px;
 }
 
 .stopka {
