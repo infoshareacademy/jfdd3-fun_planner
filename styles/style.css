@@ -2,7 +2,8 @@ body {
     margin:0;
     padding: 0;
     font-family: 'Oswald', sans-serif;
-
+    font-size: 20px;
+    font-weight: 300;
 }
 
 .clear {
@@ -10,7 +11,6 @@ body {
 }
 
 .funkcje {
-    -webkit-box-sizing: border-box;
 
 }
 
@@ -46,8 +46,7 @@ header {
     top:0;
     z-index: 1000;
 }
-
-.conteiner {
+.container {
     width: 1000px;
     margin-left: auto;
     margin-right: auto;
