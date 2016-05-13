@@ -100,8 +100,7 @@ main {
     background-image: url("../images/fota-glowna.jpeg");
     padding-top: 200px;
     height: 528px;
-    background-size: 100%;
-    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 
