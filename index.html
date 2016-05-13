@@ -11,36 +11,14 @@
 
     <body>
         <header>
-            <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-            <script>
-                $(document).ready(function() {
 
-                });
-            </script>
 
             <div class="conteiner">
                 <div class="logo-funplanner">
                     FunPlaner
                 </div>
                 <!--menu-->
-<script>
-    $(document).ready(function() {
 
-        $('a[href^="#"]').on('click', function(event) {
-
-            var target = $( $(this).attr('href') );
-
-            if( target.length ) {
-                event.preventDefault();
-                $('html, body').animate({
-                    scrollTop: target.offset().top
-                }, 1000);
-            }
-        });
-
-    });
-
-</script>
                 <nav>
                     <ul>
                         <li><a href="#zajawka">STRONA GŁÓWNA</a></li>
@@ -172,6 +150,29 @@
 
     </form>
 
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+        <script>
+            $(document).ready(function() {
 
+            });
+        </script>
+        <script>
+        $(document).ready(function() {
+
+        $('a[href^="#"]').on('click', function(event) {
+
+        var target = $( $(this).attr('href') );
+
+        if( target.length ) {
+        event.preventDefault();
+        $('html, body').animate({
+        scrollTop: target.offset().top
+        }, 1000);
+        }
+        });
+
+        });
+
+        </script>
     </body>
 </html>

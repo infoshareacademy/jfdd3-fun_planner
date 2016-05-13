@@ -40,6 +40,11 @@
 header {
     background-color: #878787;
     padding: 15px 0;
+    position: fixed;
+    left:0;
+    right:0;
+    top:0;
+    z-index: 1000;
 
 
 
@@ -127,7 +132,7 @@ body {
 .tekstzajawka {
     display: inline-block;
     position: absolute;
-    top: 200px;
+    top: 150px;
     padding-left: 340px;
     text-align: center;
     font-size: 50px;
