@@ -40,6 +40,7 @@
 header {
     background-color: #878787;
     padding: 15px 0;
+
 }
 
 main {
@@ -67,6 +68,7 @@ main {
     width: 1000px;
     margin-left: auto;
     margin-right: auto;
+    /*position: fixed;*/
 }
 
 nav {
@@ -114,6 +116,15 @@ body {
     /*align: left;*/
 
 }
+#tekstzajawka {
+    position:absolute;
+    top: 210px;
+    padding-left: 340px;
+    text-align: center;
+    font-size: 50px;
+
+}
+
 .foto {
     margin: 0;
     width: 100%;
