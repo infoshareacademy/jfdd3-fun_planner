@@ -68,7 +68,7 @@ main {
     width: 1000px;
     margin-left: auto;
     margin-right: auto;
-    /*position: fixed;*/
+
 }
 
 nav {
@@ -108,6 +108,8 @@ body {
     margin: 10px;
 
 }
+
+
 .img {
     margin-left: 50px;
     float: left;
@@ -116,9 +118,12 @@ body {
     /*align: left;*/
 
 }
-#tekstzajawka {
-    position:absolute;
-    top: 210px;
+
+
+.tekstzajawka {
+    display: inline-block;
+    position: absolute;
+    top: 200px;
     padding-left: 340px;
     text-align: center;
     font-size: 50px;
@@ -180,4 +185,8 @@ body {
     font-size: 80%;
     text-align: center;
     height: 25px;
+}
+
+a{
+
 }

@@ -6,16 +6,41 @@
         <title>FunPlanner</title>
         <link rel="stylesheet" href="styles/style.css">
         <link href='https://fonts.googleapis.com/css?family=Oswald:400,300,700&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+
     </head>
 
     <body>
         <header>
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+            <script>
+                $(document).ready(function() {
+
+                });
+            </script>
 
             <div class="conteiner">
                 <div class="logo-funplanner">
                     FunPlaner
                 </div>
                 <!--menu-->
+<script>
+    $(document).ready(function() {
+
+        $('a[href^="#"]').on('click', function(event) {
+
+            var target = $( $(this).attr('href') );
+
+            if( target.length ) {
+                event.preventDefault();
+                $('html, body').animate({
+                    scrollTop: target.offset().top
+                }, 1000);
+            }
+        });
+
+    });
+
+</script>
                 <nav>
                     <ul>
                         <li><a href="#zajawka">STRONA GŁÓWNA</a></li>
@@ -32,11 +57,12 @@
         <main>
 
             <div id="zajawka">
-              <img src="images/fota-glowna.jpeg" class="foto">
-                <p id="tekstzajawka">Zaplanuj z nami Fun w Gdańsku</p>
+              <img src="images/fota-glowna.jpeg" class="foto"></div>
+
+                <p class="tekstzajawka" style="text-align: center">Zaplanuj z nami Fun w Gdańsku</p>
 
 
-            </div>
+
 
              <div id="funkcje" class="funkcje">
                  <!--Funkcje-->
