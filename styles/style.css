@@ -2,16 +2,36 @@ body {
     margin:0;
     padding: 0;
     font-family: 'Oswald', sans-serif;
-
     font-size: 20px;
     letter-spacing: 2px;
     font-weight: 300;
 }
 
+a{
+
+}
+
 .clear {
     clear: both;
 }
+/*Nagłówek*/
+header {
+    background-color: #878787;
+    padding: 5px 0;
+    position: fixed;
+    left:0;
+    right:0;
+    top:0;
+    z-index: 1000;
+}
 
+.nawigacja{
+    position: relative;
+}
+.punkt-nawigacji{
+    position: absolute;
+    bottom: 80px;
+}
 .logo-kalendarz {
     float: left;
     display: inline;
@@ -34,22 +54,11 @@ body {
     float: left;
 }
 
-
-header {
-    background-color: #878787;
-    padding: 5px 0;
-    position: fixed;
-    left:0;
-    right:0;
-    top:0;
-    z-index: 1000;
-}
 .container {
     width: 1000px;
     margin-left: auto;
     margin-right: auto;
 }
-
 
 nav {
     float: right;
@@ -73,7 +82,6 @@ nav li a:hover {
     font-weight: 400;
     font-size: 15px;
     border-bottom: solid 3px #4caf50;
-
 }
 
 .logo-funplanner {
@@ -82,26 +90,26 @@ nav li a:hover {
     font-weight: 900;
     font-size: 30px;
     text-align: center;
-    background-image: url("../images/logo_funplanner.png");
-    background-repeat: no-repeat;
-    background-position: top center;
+    background: url("../images/logo_funplanner.png") no-repeat top center;
     width: 180px;
     padding-top: 55px;
 }
+
+/*Koniec nagłówka*/
 
 main {
     background-color: white;
     display: inline;
 }
 
+/*Zajawka*/
 .zajawka {
     background-image: url("../images/fota-glowna.jpeg");
     padding-top: 200px;
     height: 528px;
     background-size: cover;
-
+    position: relative;
 }
-
 
 .tekstzajawka {
     display: block;
@@ -111,37 +119,50 @@ main {
     width: 1000px;
     margin: auto;
     text-align: center;
-    font-family: 'Inconsolata', ;
+    /*font-family: 'Inconsolata', ;*/
 }
+
+/*Koniec zajawki*/
+
+
+/*Funkcje*/
 
 .funkcje-funplanner {
     margin-left: 200px;
     font-size: 120%;
 }
 
-
-
 .naglowki {
     float: left;
     margin: 10px;
-
 }
-
 
 .img {
     margin-left: 50px;
     float: left;
     height: 40px;
     width: 40px;
-    /*align: left;*/
-
 }
 
 .foto {
     margin: 0;
     width: 100%;
-
 }
+
+.h1 {
+    color: #4caf50;
+}
+
+.lista-funkcji {
+    width: 435px;
+    vertical-align: middle;
+    padding: 10px 30px;
+    display: inline-block;
+}
+/*Koniec funkcji*/
+
+
+/*Formularz*/
 
 .formularz {
     height: 500px;
@@ -157,6 +178,7 @@ main {
     top:35%;
     background-color: #5e5e5e;
 }
+
 .formularz form input{
     display: inline-block;
     padding: 15px;
@@ -168,6 +190,7 @@ main {
     text-align: center;
     font-family: 'Oswald', sans-serif;
 }
+
 .formularz form button{
     padding: 15px;
     background-color: #e3e3e3;
@@ -177,15 +200,16 @@ main {
     font-size: large;
     float: right;
 }
+
 .formularz form button:hover{
     background-color: #d6d6d6;
 }
-.input{
 
+.input{
     height:26px;
     width: 240px;
-
 }
+
 .info {
     width: 500px;
     margin: auto;
@@ -197,24 +221,11 @@ main {
     color: white;
     letter-spacing: 1px;
 }
+ /*Koniec formularza*/
 
+/*Stopka*/
 .stopka {
     font-size: 80%;
     text-align: center;
     height: 25px;
-}
-
-.h1 {
-    color: #4caf50;
-}
-
-.lista-funkcji {
-    width: 435px;
-    vertical-align: middle;
-    padding: 10px 30px;
-    display: inline-block;
-}
-
-a{
-
 }
