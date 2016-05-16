@@ -236,6 +236,7 @@ main {
     color: #878787;
     padding: 20px 20px;
     vertical-align: top;
+    text-align: justify;
 }
 
 .funk-ikona {
@@ -243,4 +244,20 @@ main {
     margin-right: 20px;
     margin-bottom: 20px;
     color: #4caf50;
+}
+
+.team-box {
+    color: #878787;
+    width: 204px;
+    display: inline-block;
+    vertical-align: top;
+    padding: 60px 20px;
+}
+
+.team-fota {
+    background-color: #ffffff;
+    border: solid 2px #4caf50;
+    height: 200px;
+    width: 200px;
+    border-radius: 200px;
 }
