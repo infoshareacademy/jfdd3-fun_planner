@@ -110,16 +110,26 @@ main {
     background-size: cover;
     position: relative;
 }
-
+.container-zajaw{
+    padding: 30px;
+    background-color: rgba(0, 0, 0, 0.27);
+}
 .tekstzajawka {
     display: block;
     position: relative;
-    /*top: 150px;*/
     font-size: 50px;
     width: 1000px;
     margin: auto;
     text-align: center;
-    /*font-family: 'Inconsolata', ;*/
+    color: #fff;
+    font-weight: lighter;
+    text-shadow: 0px 0px 5px #000;
+}
+.tekstzajawka.male{
+    margin-top: 30px;
+    font-size: 30px;
+    width: 100%;
+    line-height: 1.5;
 }
 
 /*Koniec zajawki*/
@@ -236,6 +246,7 @@ main {
     color: #878787;
     padding: 20px 20px;
     vertical-align: top;
+    text-align: justify;
 }
 
 .funk-ikona {
@@ -257,3 +268,54 @@ main {
 }
 
 
+
+
+.team-box {
+    color: #878787;
+    width: 204px;
+    display: inline-block;
+    vertical-align: top;
+    padding: 60px 20px;
+}
+
+.team-fota {
+    background-color: #ffffff;
+    border: solid 2px #4caf50;
+    height: 200px;
+    width: 200px;
+    border-radius: 200px;
+}
+
+.team1 {
+    background-image: url("http://static.srcdn.com/slir/w1000-h502-q90-c1000:502/wp-content/uploads/yoda1-e1446597216192.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: -120px 0;
+}
+
+.team2 {
+    background-image: url("http://samequizy.pl/wp-content/uploads/2015/12/filing_images_f42d6f5f311f.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: -55px 0;
+}
+
+.team3 {
+    background-image: url("http://i.iplsc.com/star-wars/0004RX0450KTI3TY-C116-F4.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: -55px 0;
+}
+
+.team4 {
+    background-image: url("http://media.idownloadblog.com/wp-content/uploads/2015/04/Star-Wars-Stormtrooper-2048x2048-1024x1024.jpg ");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 0 0;
+}
+
+.logo-scrumboys {
+    width: auto;
+    height: 30px;
+    vertical-align: -5px;
+}
