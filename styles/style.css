@@ -244,3 +244,16 @@ main {
     margin-bottom: 20px;
     color: #4caf50;
 }
+
+.fb {
+
+    float: right;
+}
+
+.twit {
+
+    float:right;
+    margin-right: 2px;
+}
+
+
