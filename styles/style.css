@@ -289,3 +289,9 @@ main {
     background-repeat: no-repeat;
     background-position: 0 0;
 }
+
+.logo-scrumboys {
+    width: auto;
+    height: 30px;
+    vertical-align: -5px;
+}
