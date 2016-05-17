@@ -259,6 +259,7 @@ main {
 .fb-twit{
     width: 100px;
     margin: auto;
+    padding-top: 10px;
 }
 
 .fb-twit i {
