@@ -250,15 +250,16 @@ span.tekstzajawka {
 
 .funk-box  {
     display: inline-block;
-    width: 456px;
+    width: 436px;
     color: #878787;
-    padding: 20px 20px;
+    padding: 20px 30px;
     vertical-align: top;
     text-align: justify;
 }
 
 .funk-ikona {
     float: left;
+    width: 100px;
     margin-right: 40px;
     margin-bottom: 60px;
     padding-top: 20px;
