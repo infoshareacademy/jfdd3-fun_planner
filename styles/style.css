@@ -165,6 +165,7 @@ span.tekstzajawka {
 
 .h1 {
     color: #4caf50;
+    margin-top: 80px;
 }
 
 .lista-funkcji {
@@ -257,8 +258,9 @@ span.tekstzajawka {
 
 .funk-ikona {
     float: left;
-    margin-right: 20px;
-    margin-bottom: 20px;
+    margin-right: 40px;
+    margin-bottom: 60px;
+    padding-top: 20px;
     color: #4caf50;
 }
 
