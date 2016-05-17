@@ -238,10 +238,12 @@ span.tekstzajawka {
  /*Koniec formularza*/
 
 /*Stopka*/
+
 .stopka {
     font-size: 80%;
     text-align: center;
-    height: 25px;
+    margin: 0;
+    margin-bottom: 20px;
 }
 
 .funk-box  {
@@ -260,20 +262,17 @@ span.tekstzajawka {
     color: #4caf50;
 }
 
-.fb {
-
-    float: right;
+.fb-twit{
+    width: 140px;
+    margin: auto;
+    padding: 40px;
 }
 
-.twit {
-
-    float:right;
-    margin-right: 2px;
+.fb-twit i {
+    font-size: 50px;
+    color: #4caf50;
+    margin-right: 20px;
 }
-
-
-
-
 .team-box {
     color: #878787;
     width: 204px;
