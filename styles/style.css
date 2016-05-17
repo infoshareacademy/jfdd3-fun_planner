@@ -262,15 +262,21 @@ span.tekstzajawka {
 }
 
 .fb-twit{
-    width: 170px;
+    width: 150px;
     margin: auto;
     padding: 40px;
 }
 
 .fb-twit i {
-    font-size: 75px;
+    font-size: 60px;
     color: #4caf50;
     margin-right: 10px;
+}
+.fa-facebook {
+    float: left;
+}
+.fa-twitter {
+    float: right;
 }
 .team-box {
     color: #878787;
