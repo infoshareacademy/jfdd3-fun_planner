@@ -175,7 +175,7 @@ main {
 /*Formularz*/
 
 .formularz {
-    height: 500px;
+    height: 350px;
     background-color: #878787;
 }
 
@@ -185,7 +185,7 @@ main {
     padding: 15px;
     border-radius: 10px;
     position: relative;
-    top:35%;
+    top:23%;
     background-color: #5e5e5e;
 }
 
@@ -225,7 +225,7 @@ main {
     margin: auto;
     text-align: center;
     position: relative;
-    top: 35%;
+    top: 22%;
     font-size:larger;
     line-height: 1.7;
     color: white;
