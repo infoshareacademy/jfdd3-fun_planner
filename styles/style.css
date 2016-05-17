@@ -243,8 +243,7 @@ span.tekstzajawka {
 .stopka {
     font-size: 80%;
     text-align: center;
-    margin: 0;
-    margin-bottom: 20px;
+    margin: 0 0 20px 0;
 }
 
 .funk-box  {
@@ -265,15 +264,21 @@ span.tekstzajawka {
 }
 
 .fb-twit{
-    width: 140px;
+    width: 150px;
     margin: auto;
     padding: 40px;
 }
 
 .fb-twit i {
-    font-size: 50px;
+    font-size: 60px;
     color: #4caf50;
-    margin-right: 20px;
+    margin-right: 10px;
+}
+.fa-facebook {
+    float: left;
+}
+.fa-twitter {
+    float: right;
 }
 .team-box {
     color: #878787;
