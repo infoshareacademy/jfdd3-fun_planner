@@ -80,7 +80,7 @@ nav li a:hover {
     text-decoration: none;
     font-weight: 400;
     font-size: 15px;
-    border-bottom: solid 3px #4caf50;
+    border-bottom: solid 3px #8cc63f;
 }
 
 .logo-funplanner {
@@ -107,6 +107,7 @@ main {
     padding-top: 200px;
     height: 400px;
     background-size: cover;
+    position: relative;
 }
 .container-zajaw{
     padding: 30px;
@@ -164,7 +165,7 @@ span.tekstzajawka {
 }
 
 .h1 {
-    color: #4caf50;
+    color: #8cc63f;
     margin-top: 80px;
 }
 
@@ -260,7 +261,7 @@ span.tekstzajawka {
     margin-right: 40px;
     margin-bottom: 60px;
     padding-top: 20px;
-    color: #4caf50;
+    color: #8cc63f;
 }
 
 .fb-twit{
@@ -271,7 +272,7 @@ span.tekstzajawka {
 
 .fb-twit i {
     font-size: 60px;
-    color: #4caf50;
+    color: #8cc63f;
     margin-right: 10px;
 }
 .fa-facebook {
@@ -290,7 +291,7 @@ span.tekstzajawka {
 
 .team-fota {
     background-color: #ffffff;
-    border: solid 2px #4caf50;
+    border: solid 2px #8cc63f;
     height: 200px;
     width: 200px;
     border-radius: 200px;
