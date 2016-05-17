@@ -238,8 +238,7 @@ main {
 .stopka {
     font-size: 80%;
     text-align: center;
-    margin: 0;
-    margin-bottom: 20px;
+    margin: 0 0 20px 0;
 }
 
 .funk-box  {
@@ -259,15 +258,15 @@ main {
 }
 
 .fb-twit{
-    width: 140px;
+    width: 170px;
     margin: auto;
     padding: 40px;
 }
 
 .fb-twit i {
-    font-size: 50px;
+    font-size: 75px;
     color: #4caf50;
-    margin-right: 20px;
+    margin-right: 10px;
 }
 .team-box {
     color: #878787;
