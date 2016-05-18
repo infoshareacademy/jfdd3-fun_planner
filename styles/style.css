@@ -6,13 +6,10 @@ body {
     font-weight: 300;
 }
 
-a{
-
-}
-
 .clear {
     clear: both;
 }
+
 /*Nagłówek*/
 header {
     background-color: #878787;
@@ -27,37 +24,19 @@ header {
 .nawigacja{
     position: relative;
 }
-.punkt-nawigacji{
+
+.punkt-nawigacji {
     position: absolute;
     bottom: 80px;
 }
-.logo-kalendarz {
-    float: left;
-    display: inline;
-}
 
-.kalendarz {
-    display: inline;
-    position: relative;
-    float: left;
-}
-
-.logo-powiadomienia {
-    float: left;
-    display: inline;
-}
-
-.powiadomienia {
-    display: inline;
-    position: relative;
-    float: left;
-}
 
 .container {
     width: 1000px;
     margin-left: auto;
     margin-right: auto;
 }
+
 
 nav {
     float: right;
@@ -89,11 +68,12 @@ nav li a:hover {
     font-weight: 900;
     font-size: 30px;
     text-align: center;
-    background: url("../images/logoo.png") no-repeat middle center;
+    background: url("../images/logoo.png") no-repeat center;
     background-size: 80%;
     width: 180px;
     padding-top: 70px;
 }
+
 
 /*Koniec nagłówka*/
 
@@ -102,7 +82,10 @@ main {
     display: inline;
 }
 
+
 /*Zajawka*/
+
+
 .zajawka {
     background-image: url("../images/fota-glowna.jpeg");
     padding-top: 200px;
@@ -141,111 +124,13 @@ span.tekstzajawka {
 /*Koniec zajawki*/
 
 
+
 /*Funkcje*/
 
-.funkcje-funplanner {
-    margin-left: 200px;
-    font-size: 120%;
-}
 
-.naglowki {
-    float: left;
-    margin: 10px;
-}
-
-.img {
-    margin-left: 50px;
-    float: left;
-    height: 40px;
-    width: 40px;
-}
-
-.foto {
-    margin: 0;
-    width: 100%;
-}
-
-.h1 {
+.title {
     color: #8cc63f;
     margin-top: 80px;
-}
-
-.lista-funkcji {
-    width: 435px;
-    vertical-align: middle;
-    padding: 10px 30px;
-    display: inline-block;
-}
-/*Koniec funkcji*/
-
-
-/*Formularz*/
-
-.formularz {
-    height: 350px;
-    background-color: #878787;
-}
-
-.formularz form{
-    width: 400px;
-    margin: auto;
-    padding: 15px;
-    border-radius: 10px;
-    position: relative;
-    top:23%;
-    background-color: #5e5e5e;
-}
-
-.formularz form input{
-    display: inline-block;
-    padding: 15px;
-    border: hidden;
-    border-radius: 5px;
-    font-size: large;
-    font-weight: lighter;
-    margin-right: 10px;
-    text-align: center;
-    font-family: 'Oswald', sans-serif;
-}
-
-.formularz form button{
-    padding: 15px;
-    background-color: #e3e3e3;
-    border: hidden;
-    border-radius: 5px;
-    font-family: 'Oswald', sans-serif;
-    font-size: large;
-    float: right;
-}
-
-.formularz form button:hover{
-    background-color: #d6d6d6;
-}
-
-.input{
-    height:26px;
-    width: 240px;
-}
-
-.info {
-    width: 500px;
-    margin: auto;
-    text-align: center;
-    position: relative;
-    top: 22%;
-    font-size:larger;
-    line-height: 1.7;
-    color: white;
-    letter-spacing: 1px;
-}
- /*Koniec formularza*/
-
-/*Stopka*/
-
-.stopka {
-    font-size: 80%;
-    text-align: center;
-    margin: 0 0 20px 0;
 }
 
 .funk-box  {
@@ -266,23 +151,13 @@ span.tekstzajawka {
     color: #8cc63f;
 }
 
-.fb-twit{
-    width: 150px;
-    margin: auto;
-    padding: 40px;
-}
 
-.fb-twit i {
-    font-size: 60px;
-    color: #8cc63f;
-    margin-right: 10px;
-}
-.fa-facebook {
-    float: left;
-}
-.fa-twitter {
-    float: right;
-}
+/*Koniec funkcji*/
+
+
+
+/*ZESPOL*/
+
 .team-box {
     color: #878787;
     width: 204px;
@@ -321,10 +196,106 @@ span.tekstzajawka {
 }
 
 .team4 {
-    background-image: url("http://media.idownloadblog.com/wp-content/uploads/2015/04/Star-Wars-Stormtrooper-2048x2048-1024x1024.jpg");
+    background-image: url("http://media.idownloadblog.com/wp-content/uploads/2015/04/Star-Wars-Stormtrooper-2048x2048-1024x1024.jpg ");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: 0 0;
+}
+
+/*KONIEC ZESPOL*/
+
+
+
+/*Formularz*/
+
+
+.formularz {
+    height: 350px;
+    background-color: #878787;
+}
+
+.formularz form{
+    width: 400px;
+    margin: auto;
+    padding: 15px;
+    border-radius: 10px;
+    position: relative;
+    top:23%;
+    background-color: #5e5e5e;
+}
+
+.formularz form input{
+    display: inline-block;
+    padding: 15px;
+    border: hidden;
+    border-radius: 5px;
+    font-size: large;
+    font-weight: lighter;
+    margin-right: 10px;
+    text-align: center;
+    font-family: 'Oswald', sans-serif;
+    height:26px;
+    width: 240px;
+}
+
+.formularz form button {
+    padding: 15px;
+    background-color: #e3e3e3;
+    border: hidden;
+    border-radius: 5px;
+    font-family: 'Oswald', sans-serif;
+    font-size: large;
+    float: right;
+}
+
+.formularz form button:hover{
+    background-color: #d6d6d6;
+}
+
+
+.tekstformularza {
+    width: 500px;
+    margin: auto;
+    text-align: center;
+    position: relative;
+    top: 22%;
+    font-size:larger;
+    line-height: 1.7;
+    color: white;
+    letter-spacing: 1px;
+}
+
+/*Koniec formularza*/
+
+
+
+/*Stopka*/
+
+.stopka {
+    font-size: 80%;
+    text-align: center;
+    margin: 0 0 20px 0;
+}
+
+
+.fb-twit{
+    width: 150px;
+    margin: auto;
+    padding: 40px;
+}
+
+.fb-twit i {
+    font-size: 60px;
+    color: #8cc63f;
+    margin-right: 10px;
+}
+
+.fa-facebook {
+    float: left;
+}
+
+.fa-twitter {
+    float: right;
 }
 
 .logo-scrumboys {
