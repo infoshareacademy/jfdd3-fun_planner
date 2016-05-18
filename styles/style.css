@@ -64,14 +64,18 @@ nav li a:hover {
 
 .logo-funplanner {
     float: left;
-    color: #ffffff;
-    font-weight: 900;
-    font-size: 30px;
-    text-align: center;
-    background: url("../images/logoo.png") no-repeat center;
-    background-size: 80%;
-    width: 180px;
-    padding-top: 70px;
+    color: #e7e7e7;
+    font-weight: 400;
+    font-size: 50px;
+}
+
+span.logo-fun {
+    font-weight: 700;
+    font-size: 45px;
+}
+
+span.logo-ikon {
+    color: #8cc63f;
 }
 
 
