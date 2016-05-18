@@ -130,14 +130,14 @@ span.tekstzajawka {
 
 .title {
     color: #8cc63f;
-    margin-top: 80px;
+    margin-top: 50px;
 }
 
 .funk-box  {
     display: inline-block;
     width: 436px;
     color: #878787;
-    padding: 20px 30px;
+    padding: 5px 30px;
     vertical-align: top;
     text-align: justify;
 }
@@ -265,7 +265,7 @@ span.tekstzajawka {
     letter-spacing: 1px;
 }
 
- /*Koniec formularza*/
+/*Koniec formularza*/
 
 
 
