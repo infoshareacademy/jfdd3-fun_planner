@@ -101,7 +101,7 @@ main {
     padding: 30px;
     background-color: rgba(0, 0, 0, 0.4);
     position: relative;
-    bottom: -70px;
+    bottom: -40px;
 }
 
 .tekstzajawka {
@@ -125,6 +125,22 @@ span.tekstzajawka {
     line-height: 30%;
 }
 
+.zajawka a{
+    display: block;
+    position: relative;
+    text-align: center;
+    margin: auto;
+    bottom: -70px;
+    width: 300px;
+    color: #fff;
+    text-decoration: none;
+    font-size: 30px;
+    height: 50px;
+    background-color: rgba(140, 198, 63, 0.51);
+    border-radius: 3px;
+    padding: 25px;
+    letter-spacing: 3px;
+}
 /*Koniec zajawki*/
 
 
@@ -134,14 +150,14 @@ span.tekstzajawka {
 
 .title {
     color: #8cc63f;
-    margin-top: 80px;
+    margin-top: 35px;
 }
 
 .funk-box  {
     display: inline-block;
     width: 436px;
     color: #878787;
-    padding: 20px 30px;
+    padding: 5px 30px;
     vertical-align: top;
     text-align: justify;
 }
@@ -167,7 +183,7 @@ span.tekstzajawka {
     width: 204px;
     display: inline-block;
     vertical-align: top;
-    padding: 60px 20px;
+    padding: 50px 20px;
 }
 
 .team-fota {
