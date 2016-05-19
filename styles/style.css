@@ -86,13 +86,46 @@ main {
 /*Zajawka*/
 
 
-.zajawka {
+.zajawka-1 {
     background-image: url("../images/fota-glowna.jpeg");
     padding-top: 200px;
     height: 400px;
     background-size: cover;
-    position: relative;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+
+
 }
+
+.zajawka-2 {
+    background-image: url("../images/fota-glowna2.jpeg");
+    padding-top: 200px;
+    height: 400px;
+    background-size: cover;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+
+}
+
+.zajawka-3 {
+    background-image: url("../images/fota-glowna3.jpeg");
+    padding-top: 200px;
+    height: 400px;
+    background-size: cover;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+
 .container-zajaw{
     padding: 30px;
     background-color: rgba(0, 0, 0, 0.4);
@@ -127,17 +160,22 @@ span.tekstzajawka {
 
 /*Funkcje*/
 
-
+.container-funkcje {
+    margin-top: 630px;
+    width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+}
 .title {
     color: #8cc63f;
-    margin-top: 50px;
+    margin-top: 80px;
 }
 
 .funk-box  {
     display: inline-block;
     width: 436px;
     color: #878787;
-    padding: 5px 30px;
+    padding: 20px 30px;
     vertical-align: top;
     text-align: justify;
 }
