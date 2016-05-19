@@ -18,3 +18,19 @@ $(document).ready(function() {
     });
 
 });
+
+
+$(document).ready(function(){
+    setInterval(function(){
+        $("#zajawka1").fadeOut(6000, function(){
+            $('#zajawka2').fadeOut(6000, function(){
+                    $('#zajawka1').fadeIn(6000, function () {
+                        $('#zajawka2').show();
+                    });
+            });
+        });
+    }, 15000);
+});
+
+
+
