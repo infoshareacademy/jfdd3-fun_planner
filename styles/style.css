@@ -25,14 +25,14 @@ header {
     position: relative;
 }
 
+.nawigacja-funkcje{
+    position: absolute;
+    bottom: 0;
+}
+
 .punkt-nawigacji {
     position: absolute;
     bottom: 80px;
-}
-
-.punkt-nawigacji1 {
-    position: absolute;
-    bottom: 220px;
 }
 
 
@@ -96,6 +96,10 @@ main {
 
 /*Zajawka*/
 
+.zajawka {
+    position: relative;
+    height: 600px;
+}
 
 .zajawka-1 {
     background-image: url("../images/fota-glowna.jpeg");
@@ -191,7 +195,7 @@ span.tekstzajawka {
 /*Funkcje*/
 
 .container-funkcje {
-    margin-top: 600px;
+    margin-top: 20px;
     width: 1000px;
     margin-left: auto;
     margin-right: auto;
