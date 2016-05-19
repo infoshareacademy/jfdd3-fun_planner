@@ -1,7 +1,5 @@
+'use strict'
 
-$(document).ready(function() {
-
-});
 
 $(document).ready(function() {
 
@@ -19,17 +17,23 @@ $(document).ready(function() {
 
 });
 
-
-$(document).ready(function(){
-    setInterval(function(){
-        $("#zajawka1").fadeOut(6000, function(){
-            $('#zajawka2').fadeOut(6000, function(){
-                    $('#zajawka1').fadeIn(6000, function () {
-                        $('#zajawka2').show();
-                    });
+function zmianaTla (){
+    $("#zajawka1").fadeOut(6000, function(){
+        $('#zajawka2').fadeOut(6000, function(){
+            $('#zajawka1').fadeIn(6000, function () {
+                $('#zajawka2').show();
             });
         });
-    }, 15000);
+    });
+}
+
+var zmianaInterval = setInterval(zmianaTla, 15000);
+
+
+
+
+$(document).ready(function(){
+    zmianaInterval();
 });
 
 
