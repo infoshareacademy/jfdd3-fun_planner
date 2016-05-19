@@ -20,25 +20,27 @@ $(document).ready(function() {
 });
 
 
-$(zajawka).ready(function(){
+$(document).ready(function(){
     setInterval(function(){
         $("#zajawka1").fadeOut(6000, function(){
             $('#zajawka2').fadeOut(6000, function(){
                     $('#zajawka1').fadeIn(6000);
             });
         });
-    }, 3000);
+    }, 10000);
 });
-    //
-    // $(zajawka).ready(function(){
+
+
+
+    // $(document).ready(function(){
     // setInterval(function (){
     //     $("#zajawka1").fadeOut(6000);
     //     $('#zajawka2').delay(7000).fadeOut(6000);
     //     // $('#zajawka3').delay(7000).fadeOut(6000);
-    //     $('#zajawka1').delay(7000).fadeIn(6000);
+    //     $('#zajawka1').fadeIn(6000);
     //     $('#zajawka2').delay(7000).fadeIn(6000);
     //
-    // },1500);
+    // },20000);
     //
     // });
 
