@@ -233,12 +233,17 @@ span.tekstzajawka {
 
 /*ZESPOL*/
 
+.team-names {
+    font-weight: bold;
+}
+
 .team-box {
     color: #878787;
     width: 204px;
     display: inline-block;
     vertical-align: top;
     padding: 50px 20px;
+    text-align: justify;
 }
 
 .team-fota {
