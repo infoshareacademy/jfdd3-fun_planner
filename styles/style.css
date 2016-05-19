@@ -175,16 +175,19 @@ span.tekstzajawka {
     position: relative;
     text-align: center;
     margin: auto;
-    top: 475px;
-    width: 300px;
+    top: 500px;
+    width: 180px;
     color: #fff;
     text-decoration: none;
-    font-size: 30px;
-    height: 50px;
-    background-color: rgba(140, 198, 63, 0.51);
-    border-radius: 3px;
-    padding: 25px;
-    letter-spacing: 3px;
+    font-size: 17px;
+    font-weight: 400;
+    /*height: 50px;*/
+    background-color: #8cc63f;
+    padding: 15px;
+}
+
+.zajawka a:hover {
+    color: #e9e5ea;
 }
 
 
