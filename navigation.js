@@ -20,7 +20,7 @@ $(window).on('scroll', function (event) {
 
     if (zespolOffset - scrollTop < 140) {
         //alert ('zespół')
-        navClicked($('a').attr('href=#pozycjaZespol'));
+        navClicked($('[href="#pozycjaZespol"]'));
     }
 
     console.log(scrollTop, zespolOffset);
