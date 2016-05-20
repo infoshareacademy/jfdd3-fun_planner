@@ -164,14 +164,29 @@ main {
     right: 0;
 }
 
-.button {
-    height: 50px;
-    width: 100px;
+.button1,
+.button2,
+.button3 {
+    height: 30px;
+    width: 79px;
     position: absolute;
     bottom: 10px;
+    background-size: auto;
+}
+
+.button1 {
+    background-image: url("../images/fota-mini3.jpeg");
+    right: 400px;
+}
+
+.button2 {
+    background-image: url("../images/fota-mini2.jpeg");
+    right: 250px;
+}
+
+.button3 {
+    background-image: url("../images/fota-mini1.jpeg");
     right: 100px;
-    background-image: url("../images/fota-glowna3.jpeg");
-    background-size: cover;
 }
 
 .container-zajaw{
