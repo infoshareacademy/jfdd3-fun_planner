@@ -1,6 +1,8 @@
 'use strict';
 
-var $odnosnik = $('#odnosnik');
+var $odnosnik1 = $('#odnosnik1');
+var $odnosnik2 = $('#odnosnik2');
+var $odnosnik3 = $('#odnosnik3');
 var $zajawka = $('#zajawka4');
 
 $(document).ready(function() {
@@ -20,16 +22,18 @@ $(document).ready(function() {
 });
 
 function zmianaTla (){
-    $("#zajawka1").fadeOut(6000, function(){
-        $('#zajawka2').fadeOut(6000, function(){
-            $('#zajawka1').fadeIn(6000, function () {
+    $("#zajawka1").fadeOut(4000, function(){
+        $('#zajawka2').fadeOut(4000, function(){
+            $('#zajawka1').fadeIn(4000, function () {
                 $('#zajawka2').show();
             });
         });
     });
-}
+};
 
-var zmianaInterval = setInterval(zmianaTla, 15000);
+zmianaTla();
+
+var zmianaInterval = setInterval(zmianaTla, 12000);
 
 
 $(document).ready(function(){
@@ -38,9 +42,51 @@ $(document).ready(function(){
 
 
 
-$odnosnik.on('click', function(event){
+$odnosnik3.on('click', function(event){
     event.preventDefault();
+    clearInterval(zmianaInterval);
+    $zajawka.css({
+        opacity: 0,
+        backgroundImage: 'url("images/fota-glowna.jpeg")'
+    });
+    $('#zajawka1').css({
+        opacity: 100
+    });
+    $('#zajawka2').css({
+        opacity: 100
+    });
+    $('#zajawka3').css({
+        opacity: 100
+    });
+    $('#zajawka4').css({
+        opacity: 100
+    });
+});
 
+$odnosnik2.on('click', function(event){
+    event.preventDefault();
+    clearInterval(zmianaInterval);
+    $zajawka.css({
+        opacity: 0,
+        backgroundImage: 'url("images/fota-glowna2.jpeg")'
+    });
+    $('#zajawka1').css({
+        opacity: 100
+    });
+    $('#zajawka2').css({
+        opacity: 100
+    });
+    $('#zajawka3').css({
+        opacity: 100
+    });
+    $('#zajawka4').css({
+        opacity: 100
+    });
+});
+
+$odnosnik1.on('click', function(event){
+    event.preventDefault();
+    clearInterval(zmianaInterval);
     $zajawka.css({
         opacity: 0,
         backgroundImage: 'url("images/fota-glowna3.jpeg")'

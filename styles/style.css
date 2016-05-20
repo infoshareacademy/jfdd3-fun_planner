@@ -174,8 +174,8 @@ main {
     background-size: auto;
 }
 
-.button1 {
-    background-image: url("../images/fota-mini3.jpeg");
+.button3 {
+    background-image: url("../images/fota-mini.jpeg");
     right: 400px;
 }
 
@@ -184,8 +184,8 @@ main {
     right: 250px;
 }
 
-.button3 {
-    background-image: url("../images/fota-mini1.jpeg");
+.button1 {
+    background-image: url("../images/fota-mini3.jpeg");
     right: 100px;
 }
 
