@@ -35,6 +35,3 @@ var zmianaInterval = setInterval(zmianaTla, 15000);
 $(document).ready(function(){
     zmianaInterval();
 });
-
-
-
