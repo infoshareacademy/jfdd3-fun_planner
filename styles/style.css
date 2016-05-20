@@ -68,7 +68,16 @@ nav li:hover a {
     font-weight: 400;
     font-size: 15px;
     border-bottom: solid 3px #8cc63f;
-    cursor: pointer;
+    /*cursor: pointer;*/
+}
+
+.nav-clicked {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 400;
+    font-size: 15px;
+    border-bottom: solid 3px #8cc63f;
+    cursor: default;
 }
 
 .logo-funplanner {
