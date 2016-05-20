@@ -2,22 +2,30 @@
 
 // zmiana stanu przycisku nawigacji
 
-function navClicked() {
+function navClicked(sekcja) {
     var $node = $('nav li a');
 
-    $node.click(function () {
-        $node.removeClass();
-        $(this).addClass('nav-clicked');
-    })
+    $node.removeClass();
+    $(sekcja).addClass('nav-clicked');
+
 }
 
 // odczytywanie pozycji strony
 
-function Ypos() {
-    var positionY = window.scrollY;
-    return positionY
-}
+$(window).on('scroll', function (event) {
+    //console.log(event);
+    var sekcja;
+    var scrollTop = $(window).scrollTop();
+    var zespolOffset = $('#zespol').offset().top;
 
-Ypos();
+    if (zespolOffset - scrollTop < 140) {
+        //alert ('zespół')
+        navClicked($('a').attr('href=#pozycjaZespol'));
+    }
 
-navClicked();
+    console.log(scrollTop, zespolOffset);
+});
+
+
+
+//navClicked();
