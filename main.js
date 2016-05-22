@@ -1,8 +1,6 @@
 'use strict';
 
-var $odnosnik1 = $('#odnosnik1');
-var $odnosnik2 = $('#odnosnik2');
-var $odnosnik3 = $('#odnosnik3');
+var $odnosnik = $('.button-zajawka');
 var $zajawka = $('#zajawka4');
 
 $(document).ready(function() {
@@ -29,7 +27,7 @@ function zmianaTla (){
             });
         });
     });
-};
+}
 
 zmianaTla();
 
@@ -42,13 +40,30 @@ $(document).ready(function(){
 
 
 
-$odnosnik3.on('click', function(event){
+$odnosnik.on('click', function(event){      //funkcja zmieniająca tło przy użyciu przycisków
     event.preventDefault();
     clearInterval(zmianaInterval);
-    $zajawka.css({
-        opacity: 0,
-        backgroundImage: 'url("images/fota-glowna.jpeg")'
-    });
+    var przycisk = $(this).val();   //zmienna ustalająca który przycisk został naciśnięty
+    switch (przycisk) {             //w zależności który przycisk został naciśnięty takie tło zostaje ustawione
+        case "1":
+            $zajawka.css({
+                opacity: 0,
+                backgroundImage: 'url("images/fota-glowna.jpeg")'
+            });
+            break;
+        case "2":
+            $zajawka.css({
+                opacity: 0,
+                backgroundImage: 'url("images/fota-glowna2.jpeg")'
+            });
+            break;
+        case "3":
+            $zajawka.css({
+                opacity: 0,
+                backgroundImage: 'url("images/fota-glowna3.jpeg")'
+            });
+            break;
+    }
     $('#zajawka1').css({
         opacity: 100
     });
@@ -63,45 +78,4 @@ $odnosnik3.on('click', function(event){
     });
 });
 
-$odnosnik2.on('click', function(event){
-    event.preventDefault();
-    clearInterval(zmianaInterval);
-    $zajawka.css({
-        opacity: 0,
-        backgroundImage: 'url("images/fota-glowna2.jpeg")'
-    });
-    $('#zajawka1').css({
-        opacity: 100
-    });
-    $('#zajawka2').css({
-        opacity: 100
-    });
-    $('#zajawka3').css({
-        opacity: 100
-    });
-    $('#zajawka4').css({
-        opacity: 100
-    });
-});
-
-$odnosnik1.on('click', function(event){
-    event.preventDefault();
-    clearInterval(zmianaInterval);
-    $zajawka.css({
-        opacity: 0,
-        backgroundImage: 'url("images/fota-glowna3.jpeg")'
-    });
-    $('#zajawka1').css({
-        opacity: 100
-    });
-    $('#zajawka2').css({
-        opacity: 100
-    });
-    $('#zajawka3').css({
-        opacity: 100
-    });
-    $('#zajawka4').css({
-        opacity: 100
-    });
-});
 
