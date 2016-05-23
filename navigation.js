@@ -1,30 +1,38 @@
 'use strict';
 
-// zmiana stanu przycisku nawigacji
+function changeConditionNavigationButton(nodeAtags) {
+    var $nodeInNavigation = $('nav li a');
 
-function navClicked(section) {
-    var $node = $('nav li a');
-
-    $node.removeClass();
-    $(section).addClass('nav-clicked');
+        $nodeInNavigation.removeClass();
+        nodeAtags.addClass('nav-clicked');
 
 }
 
-// odczytywanie pozycji strony
-
-$(window).on('scroll', function (event) {
-    //console.log(event);
-    var scrollTop = $(window).scrollTop();
-    var zespolOffset = $('#zespol').offset().top;
-
-    if (zespolOffset - scrollTop < 140) {
-        //alert ('zespół')
-        navClicked($('[href="#pozycjaZespol"]'));
-    }
-
-    console.log(scrollTop, zespolOffset);
+$(document).ready(function() {
+    changeConditionNavigationButton($("[href='#zajawka']"));
 });
 
+$(window).on('scroll', function (event) {
+    var scrollTop = $(window).scrollTop();
 
+    if (scrollTop < 300) {
 
-//navClicked();
+        changeConditionNavigationButton($("[href='#zajawka']"));
+    }
+
+    if (scrollTop > 400 && scrollTop < 700) {
+
+        changeConditionNavigationButton($("[href='#pozycjaFunkcje']"));
+    }
+
+    if (scrollTop > 1000 && scrollTop < 1300) {
+
+        changeConditionNavigationButton($("[href='#pozycjaZespol']"));
+    }
+
+    if (scrollTop > 1600 && scrollTop < 1700) {
+
+        changeConditionNavigationButton($("[href='#pozycjaFormularz']"));
+    }
+
+});

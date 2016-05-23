@@ -21,7 +21,7 @@ header {
     z-index: 1000;
 }
 
-.nawigacja{
+.navigation {
     position: relative;
 }
 
@@ -152,6 +152,40 @@ main {
     right: 0;
 }
 
+.zajawka-4 {
+    /*background-image: url("../images/fota-glowna3.jpeg");*/
+    padding-top: 200px;
+    height: 400px;
+    background-size: cover;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+.przycisk-zmiana-tla {
+    height: 30px;
+    width: 79px;
+    position: absolute;
+    bottom: 10px;
+    background-size: auto;
+}
+
+#przyciskZmianaTla1 {            /*narazie użyte są selektory id ale to będzie później zmienione*/
+    background-image: url("../images/fota-mini.jpeg");
+    right: 400px;
+}
+
+#przyciskZmianaTla2 {
+    background-image: url("../images/fota-mini2.jpeg");
+    right: 250px;
+}
+
+#przyciskZmianaTla3 {
+    background-image: url("../images/fota-mini3.jpeg");
+    right: 100px;
+}
 
 .container-zajaw{
     padding: 30px;
@@ -215,12 +249,12 @@ span.tekstzajawka {
     margin-left: auto;
     margin-right: auto;
 }
-.title {
+.title-function-h-elements {
     color: #8cc63f;
     margin-top: 35px;
 }
 
-.funk-box  {
+.functions-box {
     display: inline-block;
     width: 436px;
     color: #878787;
@@ -229,7 +263,7 @@ span.tekstzajawka {
     text-align: justify;
 }
 
-.funk-ikona {
+.functions-ikona {
     float: left;
     width: 100px;
     margin-right: 40px;
