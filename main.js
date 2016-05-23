@@ -47,19 +47,19 @@ przyciskZmianaTla.on('click', function(event){      //funkcja zmieniająca tło 
     switch (nrPrzycisku) {             //w zależności który przycisk został naciśnięty takie tło zostaje ustawione
         case "1":
             $zajawka.css({
-                opacity: 0,
+                opacity: 100,
                 backgroundImage: 'url("images/fota-glowna.jpeg")'
             });
             break;
         case "2":
             $zajawka.css({
-                opacity: 0,
+                opacity: 100,
                 backgroundImage: 'url("images/fota-glowna2.jpeg")'
             });
             break;
         case "3":
             $zajawka.css({
-                opacity: 0,
+                opacity: 100,
                 backgroundImage: 'url("images/fota-glowna3.jpeg")'
             });
             break;
@@ -71,9 +71,6 @@ przyciskZmianaTla.on('click', function(event){      //funkcja zmieniająca tło 
         opacity: 100
     });
     $('#zajawka3').css({
-        opacity: 100
-    });
-    $('#zajawka4').css({
         opacity: 100
     });
 });
