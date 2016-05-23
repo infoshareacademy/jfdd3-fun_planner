@@ -1,5 +1,5 @@
 body {
-    margin: 0;
+    margin:0;
     padding: 0;
     font-family: 'Oswald', sans-serif;
     font-size: 20px;
@@ -15,9 +15,9 @@ header {
     background-color: #878787;
     padding: 5px 0;
     position: fixed;
-    left: 0;
-    right: 0;
-    top: 0;
+    left:0;
+    right:0;
+    top:0;
     z-index: 1000;
 }
 
@@ -25,7 +25,7 @@ header {
     position: relative;
 }
 
-.nawigacja-funkcje {
+.nawigacja-funkcje{
     position: absolute;
     bottom: 0;
 }

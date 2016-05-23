@@ -1,18 +1,38 @@
 'use strict';
 
-// zmiana stanu przycisku nawigacji
-
-function changeConditionNavigationButton() {
+function changeConditionNavigationButton(nodeAtags) {
     var $nodeInNavigation = $('nav li a');
 
-    $nodeInNavigation.click(function () {
         $nodeInNavigation.removeClass();
-        $(this).addClass('nav-clicked');
-    })
+        nodeAtags.addClass('nav-clicked');
+
 }
 
-// odczytywanie pozycji strony
+$(document).ready(function() {
+    changeConditionNavigationButton($("[href='#zajawka']"));
+});
 
-//???????????????
+$(window).on('scroll', function (event) {
+    var scrollTop = $(window).scrollTop();
 
-changeConditionNavigationButton();
+    if (scrollTop < 300) {
+
+        changeConditionNavigationButton($("[href='#zajawka']"));
+    }
+
+    if (scrollTop > 400 && scrollTop < 700) {
+
+        changeConditionNavigationButton($("[href='#pozycjaFunkcje']"));
+    }
+
+    if (scrollTop > 1000 && scrollTop < 1300) {
+
+        changeConditionNavigationButton($("[href='#pozycjaZespol']"));
+    }
+
+    if (scrollTop > 1600 && scrollTop < 1700) {
+
+        changeConditionNavigationButton($("[href='#pozycjaFormularz']"));
+    }
+
+});
