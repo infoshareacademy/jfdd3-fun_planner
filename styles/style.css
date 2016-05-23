@@ -254,7 +254,7 @@ span.tekstzajawka {
     margin-top: 35px;
 }
 
-.funk-box  {
+.functions-box {
     display: inline-block;
     width: 436px;
     color: #878787;
@@ -263,7 +263,7 @@ span.tekstzajawka {
     text-align: justify;
 }
 
-.funk-ikona {
+.functions-ikona {
     float: left;
     width: 100px;
     margin-right: 40px;
