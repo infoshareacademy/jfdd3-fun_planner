@@ -44,21 +44,22 @@ $(document).ready(function(){
 przyciskZmianaTla.on('click', function(event){      //funkcja zmieniająca tło przy użyciu przycisków
     event.preventDefault();
     clearInterval(InterwalowaZmianaTla);
-    var nrPrzycisku = $(this).val();   //zmienna ustalająca który przycisk został naciśnięty
+    var nrPrzycisku = $(this).attr('id');   //zmienna ustalająca który przycisk został naciśnięty
+    console.log(nrPrzycisku);
     switch (nrPrzycisku) {             //w zależności który przycisk został naciśnięty takie tło zostaje ustawione
-        case "1":
+        case "tlo1":
             $zajawka.css({
                 opacity: 100,
                 backgroundImage: 'url("images/fota-glowna.jpeg")'
             });
             break;
-        case "2":
+        case "tlo2":
             $zajawka.css({
                 opacity: 100,
                 backgroundImage: 'url("images/fota-glowna2.jpeg")'
             });
             break;
-        case "3":
+        case "tlo3":
             $zajawka.css({
                 opacity: 100,
                 backgroundImage: 'url("images/fota-glowna3.jpeg")'
@@ -69,5 +70,3 @@ przyciskZmianaTla.on('click', function(event){      //funkcja zmieniająca tło 
         opacity: 0
     });
 });
-
-
