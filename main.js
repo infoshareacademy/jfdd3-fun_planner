@@ -40,6 +40,7 @@ $(document).ready(function(){
 
 
 
+
 przyciskZmianaTla.on('click', function(event){      //funkcja zmieniająca tło przy użyciu przycisków
     event.preventDefault();
     clearInterval(InterwalowaZmianaTla);
@@ -64,13 +65,7 @@ przyciskZmianaTla.on('click', function(event){      //funkcja zmieniająca tło 
             });
             break;
     }
-    $('#zajawka1').css({
-        opacity: 0
-    });
-    $('#zajawka2').css({
-        opacity: 0
-    });
-    $('#zajawka3').css({
+    $('#zajawka1, #zajawka2, #zajawka3').css({
         opacity: 0
     });
 });
