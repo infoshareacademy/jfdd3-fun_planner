@@ -1,6 +1,6 @@
 'use strict';
 
-var $odnosnik = $('.button-zajawka');
+var przyciskZmianaTla = $('.przycisk-zmiana-tla');
 var $zajawka = $('#zajawka4');
 
 $(document).ready(function() {
@@ -31,18 +31,18 @@ function zmianaTla (){
 
 zmianaTla();
 
-var zmianaInterval = setInterval(zmianaTla, 12000);
+var InterwalowaZmianaTla = setInterval(zmianaTla, 12000);
 
 
 $(document).ready(function(){
-    return zmianaInterval;
+    return InterwalowaZmianaTla;
 });
 
 
 
-$odnosnik.on('click', function(event){      //funkcja zmieniająca tło przy użyciu przycisków
+przyciskZmianaTla.on('click', function(event){      //funkcja zmieniająca tło przy użyciu przycisków
     event.preventDefault();
-    clearInterval(zmianaInterval);
+    clearInterval(InterwalowaZmianaTla);
     var nrPrzycisku = $(this).val();   //zmienna ustalająca który przycisk został naciśnięty
     switch (nrPrzycisku) {             //w zależności który przycisk został naciśnięty takie tło zostaje ustawione
         case "1":
