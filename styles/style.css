@@ -107,8 +107,7 @@ main {
     height: 600px;
 }
 
-.zajawka-1 {
-    background-image: url("../images/fota-glowna.jpeg");
+.pod-zajawka {
     padding-top: 200px;
     height: 400px;
     background-size: cover;
@@ -117,44 +116,18 @@ main {
     bottom: 0;
     left: 0;
     right: 0;
+}
 
+.zajawka-1 {
+    background-image: url("../images/fota-glowna.jpeg");
 }
 
 .zajawka-2 {
     background-image: url("../images/fota-glowna2.jpeg");
-    padding-top: 200px;
-    height: 400px;
-    background-size: cover;
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-
 }
 
 .zajawka-3 {
     background-image: url("../images/fota-glowna3.jpeg");
-    padding-top: 200px;
-    height: 400px;
-    background-size: cover;
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-}
-
-.zajawka-4 {
-    /*background-image: url("../images/fota-glowna3.jpeg");*/
-    padding-top: 200px;
-    height: 400px;
-    background-size: cover;
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
 }
 
 .przycisk-zmiana-tla {
