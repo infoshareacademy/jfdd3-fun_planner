@@ -203,6 +203,43 @@ span.tekstzajawka {
     color: #e9e5ea;
 }
 
+.slider {
+    width: 170px;
+    height: 32px;
+    position: absolute;
+    bottom: 0;
+    margin: auto;
+    left: 0;
+    right: 0;
+}
+
+.slider-dot {
+    background-image: url("../images/dot.png");
+    background-size: 70%;
+    background-repeat: no-repeat;
+    width: 32px;
+    height: 32px;
+    float: left;
+}
+
+.dot1 {
+    margin-left: 19px;
+    margin-right: 20px;
+}
+
+.dot2 {
+    margin-right: 20px;
+}
+
+.dot-green {
+    background-image: url("../images/dot-green.png");
+    background-size: 70%;
+    background-repeat: no-repeat;
+    width: 32px;
+    height: 32px;
+    float: left;
+}
+
 /*Koniec zajawki*/
 
 /*Funkcje*/
