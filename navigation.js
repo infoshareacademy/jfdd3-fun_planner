@@ -30,7 +30,7 @@ $(window).on('scroll', function (event) {
         changeConditionNavigationButton($("[href='#pozycjaZespol']"));
     }
 
-    if (scrollTop > 1600 && scrollTop < 1700) {
+    if (scrollTop > 1400 && scrollTop < 1600) {
 
         changeConditionNavigationButton($("[href='#pozycjaFormularz']"));
     }
