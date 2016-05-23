@@ -2,11 +2,11 @@
 
 // zmiana stanu przycisku nawigacji
 
-function navClicked(sekcja) {
+function navClicked(section) {
     var $node = $('nav li a');
 
     $node.removeClass();
-    $(sekcja).addClass('nav-clicked');
+    $(section).addClass('nav-clicked');
 
 }
 
@@ -14,7 +14,6 @@ function navClicked(sekcja) {
 
 $(window).on('scroll', function (event) {
     //console.log(event);
-    var sekcja;
     var scrollTop = $(window).scrollTop();
     var zespolOffset = $('#zespol').offset().top;
 
