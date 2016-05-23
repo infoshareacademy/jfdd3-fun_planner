@@ -13,11 +13,6 @@ function navClicked() {
 
 // odczytywanie pozycji strony
 
-function Ypos() {
-    var positionY = window.scrollY;
-    return positionY
-}
-
-Ypos();
+//???????????????
 
 navClicked();
