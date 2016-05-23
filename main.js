@@ -3,13 +3,13 @@
 var przyciskZmianaTla = $('.przycisk-zmiana-tla');
 var $zajawka = $('#zajawka4');
 
-$(document).ready(function () {
+$(document).ready(function() {
 
-    $('a[href^="#"]').on('click', function (event) {
+    $('a[href^="#"]').on('click', function(event) {
 
-        var target = $($(this).attr('href'));
+        var target = $( $(this).attr('href') );
 
-        if (target.length) {
+        if( target.length ) {
             event.preventDefault();
             $('html, body').animate({
                 scrollTop: target.offset().top
@@ -19,9 +19,9 @@ $(document).ready(function () {
 
 });
 
-function zmianaTla() {
-    $("#zajawka1").fadeOut(4000, function () {
-        $('#zajawka2').fadeOut(4000, function () {
+function zmianaTla (){
+    $("#zajawka1").fadeOut(4000, function(){
+        $('#zajawka2').fadeOut(4000, function(){
             $('#zajawka1').fadeIn(4000, function () {
                 $('#zajawka2').show();
             });
@@ -34,11 +34,13 @@ zmianaTla();
 var InterwalowaZmianaTla = setInterval(zmianaTla, 12000);
 
 
-$(document).ready(function () {
+$(document).ready(function(){
     return InterwalowaZmianaTla;
 });
 
-przyciskZmianaTla.on('click', function (event) {      //funkcja zmieniająca tło przy użyciu przycisków
+
+
+przyciskZmianaTla.on('click', function(event){      //funkcja zmieniająca tło przy użyciu przycisków
     event.preventDefault();
     clearInterval(InterwalowaZmianaTla);
     var nrPrzycisku = $(this).val();   //zmienna ustalająca który przycisk został naciśnięty
