@@ -96,15 +96,12 @@ span.logo-ikon {
     color: #8cc63f;
 }
 
-
-
 /*Koniec nagłówka*/
 
 main {
     background-color: white;
     display: inline;
 }
-
 
 /*Zajawka*/
 
@@ -236,10 +233,7 @@ span.tekstzajawka {
     color: #e9e5ea;
 }
 
-
 /*Koniec zajawki*/
-
-
 
 /*Funkcje*/
 
@@ -272,10 +266,7 @@ span.tekstzajawka {
     color: #8cc63f;
 }
 
-
 /*Koniec funkcji*/
-
-
 
 /*ZESPOL*/
 
@@ -330,10 +321,7 @@ span.tekstzajawka {
 
 /*KONIEC ZESPOL*/
 
-
-
 /*Formularz*/
-
 
 .formularz {
     height: 350px;
@@ -378,7 +366,6 @@ span.tekstzajawka {
     background-color: #d6d6d6;
 }
 
-
 .tekstformularza {
     width: 500px;
     margin: auto;
@@ -392,8 +379,6 @@ span.tekstzajawka {
 }
 
 /*Koniec formularza*/
-
-
 
 /*Stopka*/
 
