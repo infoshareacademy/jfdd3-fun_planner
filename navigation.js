@@ -2,11 +2,11 @@
 
 // zmiana stanu przycisku nawigacji
 
-function navClicked() {
-    var $node = $('nav li a');
+function changeConditionNavigationButton() {
+    var $nodeInNavigation = $('nav li a');
 
-    $node.click(function () {
-        $node.removeClass();
+    $nodeInNavigation.click(function () {
+        $nodeInNavigation.removeClass();
         $(this).addClass('nav-clicked');
     })
 }
@@ -15,4 +15,4 @@ function navClicked() {
 
 //???????????????
 
-navClicked();
+changeConditionNavigationButton();
