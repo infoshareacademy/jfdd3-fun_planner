@@ -1,5 +1,5 @@
 body {
-    margin:0;
+    margin: 0;
     padding: 0;
     font-family: 'Oswald', sans-serif;
     font-size: 20px;
@@ -15,9 +15,9 @@ header {
     background-color: #878787;
     padding: 5px 0;
     position: fixed;
-    left:0;
-    right:0;
-    top:0;
+    left: 0;
+    right: 0;
+    top: 0;
     z-index: 1000;
 }
 
@@ -25,7 +25,7 @@ header {
     position: relative;
 }
 
-.nawigacja-funkcje{
+.nawigacja-funkcje {
     position: absolute;
     bottom: 0;
 }
@@ -35,14 +35,11 @@ header {
     bottom: 80px;
 }
 
-
-
 .container {
     width: 1000px;
     margin-left: auto;
     margin-right: auto;
 }
-
 
 nav {
     float: right;
@@ -96,15 +93,12 @@ span.logo-ikon {
     color: #8cc63f;
 }
 
-
-
 /*Koniec nagłówka*/
 
 main {
     background-color: white;
     display: inline;
 }
-
 
 /*Zajawka*/
 
@@ -123,7 +117,6 @@ main {
     bottom: 0;
     left: 0;
     right: 0;
-
 
 }
 
@@ -172,7 +165,7 @@ main {
     background-size: auto;
 }
 
-#przyciskZmianaTla1 {            /*narazie użyte są selektory id ale to będzie później zmienione*/
+#przyciskZmianaTla1 { /*narazie użyte są selektory id ale to będzie później zmienione*/
     background-image: url("../images/fota-mini.jpeg");
     right: 400px;
 }
@@ -187,7 +180,7 @@ main {
     right: 100px;
 }
 
-.container-zajaw{
+.container-zajaw {
     padding: 30px;
     background-color: rgba(0, 0, 0, 0.4);
     position: relative;
@@ -208,14 +201,14 @@ span.tekstzajawka {
     font-weight: 700;
 }
 
-.tekstzajawka.male{
+.tekstzajawka.male {
     font-size: 30px;
     font-weight: 400;
     letter-spacing: 1px;
     line-height: 30%;
 }
 
-.zajawka a{
+.zajawka a {
 
     display: block;
     position: relative;
@@ -236,10 +229,7 @@ span.tekstzajawka {
     color: #e9e5ea;
 }
 
-
 /*Koniec zajawki*/
-
-
 
 /*Funkcje*/
 
@@ -249,6 +239,7 @@ span.tekstzajawka {
     margin-left: auto;
     margin-right: auto;
 }
+
 .title-function-h-elements {
     color: #8cc63f;
     margin-top: 35px;
@@ -272,10 +263,7 @@ span.tekstzajawka {
     color: #8cc63f;
 }
 
-
 /*Koniec funkcji*/
-
-
 
 /*ZESPOL*/
 
@@ -330,27 +318,24 @@ span.tekstzajawka {
 
 /*KONIEC ZESPOL*/
 
-
-
 /*Formularz*/
-
 
 .formularz {
     height: 350px;
     background-color: #878787;
 }
 
-.formularz form{
+.formularz form {
     width: 400px;
     margin: auto;
     padding: 15px;
     border-radius: 10px;
     position: relative;
-    top:23%;
+    top: 23%;
     background-color: #5e5e5e;
 }
 
-.formularz form input{
+.formularz form input {
     display: inline-block;
     padding: 15px;
     border: hidden;
@@ -360,7 +345,7 @@ span.tekstzajawka {
     margin-right: 10px;
     text-align: center;
     font-family: 'Oswald', sans-serif;
-    height:26px;
+    height: 26px;
     width: 240px;
 }
 
@@ -374,10 +359,9 @@ span.tekstzajawka {
     float: right;
 }
 
-.formularz form button:hover{
+.formularz form button:hover {
     background-color: #d6d6d6;
 }
-
 
 .tekstformularza {
     width: 500px;
@@ -385,15 +369,13 @@ span.tekstzajawka {
     text-align: center;
     position: relative;
     top: 22%;
-    font-size:larger;
+    font-size: larger;
     line-height: 1.7;
     color: white;
     letter-spacing: 1px;
 }
 
 /*Koniec formularza*/
-
-
 
 /*Stopka*/
 
@@ -403,8 +385,7 @@ span.tekstzajawka {
     margin: 0 0 20px 0;
 }
 
-
-.fb-twit{
+.fb-twit {
     width: 150px;
     margin: auto;
     padding: 40px;
