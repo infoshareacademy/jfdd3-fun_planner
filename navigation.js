@@ -1,38 +1,39 @@
 'use strict';
 
-function changeConditionNavigationButton(nodeAtags) {
-    var $nodeInNavigation = $('nav li a');
+var nodeInNavigation = ('nav li a');
 
-        $nodeInNavigation.removeClass();
-        nodeAtags.addClass('nav-clicked');
+function changeConditionNavigationButton(nodeAtags) {
+
+        $(nodeInNavigation).removeClass();
+        $(nodeAtags).addClass('nav-clicked');
 
 }
 
 $(document).ready(function() {
-    changeConditionNavigationButton($("[href='#zajawka']"));
+    changeConditionNavigationButton(nodeInNavigation +("[href='#zajawka']"));
 });
 
-$(window).on('scroll', function (event) {
+$(window).on('scroll', function () {
     var scrollTop = $(window).scrollTop();
 
     if (scrollTop < 300) {
 
-        changeConditionNavigationButton($("[href='#zajawka']"));
+        changeConditionNavigationButton(nodeInNavigation +("[href='#zajawka']"));
     }
 
     if (scrollTop > 400 && scrollTop < 700) {
 
-        changeConditionNavigationButton($("[href='#pozycjaFunkcje']"));
+        changeConditionNavigationButton(nodeInNavigation +("[href='#pozycjaFunkcje']"));
     }
 
     if (scrollTop > 1000 && scrollTop < 1300) {
 
-        changeConditionNavigationButton($("[href='#pozycjaZespol']"));
+        changeConditionNavigationButton(nodeInNavigation +("[href='#pozycjaZespol']"));
     }
 
     if (scrollTop > 1400 && scrollTop < 1600) {
 
-        changeConditionNavigationButton($("[href='#pozycjaFormularz']"));
+        changeConditionNavigationButton(nodeInNavigation +("[href='#pozycjaFormularz']"));
     }
 
 });
