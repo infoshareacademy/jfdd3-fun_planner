@@ -43,8 +43,8 @@ $(document).ready(function(){
 $odnosnik.on('click', function(event){      //funkcja zmieniająca tło przy użyciu przycisków
     event.preventDefault();
     clearInterval(zmianaInterval);
-    var przycisk = $(this).val();   //zmienna ustalająca który przycisk został naciśnięty
-    switch (przycisk) {             //w zależności który przycisk został naciśnięty takie tło zostaje ustawione
+    var nrPrzycisku = $(this).val();   //zmienna ustalająca który przycisk został naciśnięty
+    switch (nrPrzycisku) {             //w zależności który przycisk został naciśnięty takie tło zostaje ustawione
         case "1":
             $zajawka.css({
                 opacity: 0,

@@ -164,7 +164,7 @@ main {
     right: 0;
 }
 
-.button-zajawka {
+.przycisk-zmiana-tla {
     height: 30px;
     width: 79px;
     position: absolute;
@@ -172,17 +172,17 @@ main {
     background-size: auto;
 }
 
-#odnosnik1 {            /*narazie użyte są selektory id ale to będzie później zmienione*/
+#przyciskZmianaTla1 {            /*narazie użyte są selektory id ale to będzie później zmienione*/
     background-image: url("../images/fota-mini.jpeg");
     right: 400px;
 }
 
-#odnosnik2 {
+#przyciskZmianaTla2 {
     background-image: url("../images/fota-mini2.jpeg");
     right: 250px;
 }
 
-#odnosnik3 {
+#przyciskZmianaTla3 {
     background-image: url("../images/fota-mini3.jpeg");
     right: 100px;
 }
