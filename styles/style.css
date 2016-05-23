@@ -164,9 +164,7 @@ main {
     right: 0;
 }
 
-.button1,
-.button2,
-.button3 {
+.button-zajawka {
     height: 30px;
     width: 79px;
     position: absolute;
@@ -174,17 +172,17 @@ main {
     background-size: auto;
 }
 
-.button3 {
+#odnosnik1 {            /*narazie użyte są selektory id ale to będzie później zmienione*/
     background-image: url("../images/fota-mini.jpeg");
     right: 400px;
 }
 
-.button2 {
+#odnosnik2 {
     background-image: url("../images/fota-mini2.jpeg");
     right: 250px;
 }
 
-.button1 {
+#odnosnik3 {
     background-image: url("../images/fota-mini3.jpeg");
     right: 100px;
 }
