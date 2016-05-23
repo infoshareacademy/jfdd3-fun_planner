@@ -21,7 +21,7 @@ header {
     z-index: 1000;
 }
 
-.nawigacja{
+.navigation {
     position: relative;
 }
 
@@ -249,7 +249,7 @@ span.tekstzajawka {
     margin-left: auto;
     margin-right: auto;
 }
-.title {
+.title-function-h-elements {
     color: #8cc63f;
     margin-top: 35px;
 }
