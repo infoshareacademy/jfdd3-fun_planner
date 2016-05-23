@@ -75,6 +75,7 @@ nav li:hover a {
     font-size: 15px;
     border-bottom: solid 3px #8cc63f;
     cursor: default;
+    pointer-events: none;
 }
 
 .logo-funplanner {
