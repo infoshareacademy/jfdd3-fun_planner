@@ -4,6 +4,8 @@
  */
 'use strict';
 
+var $przyciskNowaGra = $('<button>');
+$przyciskNowaGra.html("Nowa Gra");
 
 $("#zacznijgre").on("click", function () {
     var $container,
@@ -21,7 +23,7 @@ $("#zacznijgre").on("click", function () {
 
     $gameBoard = createTable(20, 10);
 
-
+    $container.append($przyciskNowaGra);
     $container.append($gameBoard);
 
 });
@@ -79,7 +81,10 @@ function moveClient () {
 
 }
 
-moveClient ();
+$przyciskNowaGra.on('click', function(){
+    moveClient ();
+});
+
 console.log(X);
 
 
