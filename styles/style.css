@@ -387,3 +387,7 @@ span.tekstzajawka {
     border-collapse: collapse;
     margin: auto;
 }
+
+.red {
+    background-color: #ff0000;
+}
