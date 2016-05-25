@@ -23,6 +23,7 @@ $("#zacznijgre").on("click", function () {
 
 
     $container.append($gameBoard);
+    moveClient ();
 
 });
 
@@ -79,7 +80,7 @@ function moveClient () {
 
 }
 
-moveClient ();
+
 console.log(X);
 
 
