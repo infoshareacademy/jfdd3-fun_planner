@@ -4,8 +4,7 @@
  */
 'use strict';
 
-var $przyciskNowaGra = $('<button>');
-$przyciskNowaGra.html("Nowa Gra");
+var $przyciskNowaGra = $('<button>').html("Nowa Gra");
 
 $("#zacznijgre").on("click", function () {
     var $container,
@@ -40,7 +39,7 @@ function createTable(width, height) {
         $tr = $('<tr>');
         for (var x = 0; x < width; x += 1) {
             $td = $('<td>');
-            $td.addClass('cell');
+            $td.addClass('cell').attr("pozY", y).attr("pozX", x);
             $tr.append($td);
         }
         $table.append($tr);
