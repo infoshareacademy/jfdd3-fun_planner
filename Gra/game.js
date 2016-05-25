@@ -52,8 +52,8 @@ function createTable(width, height) {
 
 function moveClient () {
 
-    var Y = 0+getStartPointY ();
-    var X = 0+getStartPointX ();
+    var Y = getStartPointY ();
+    var X = getStartPointX ();
 
     function getStartPointY () {
         var yPos = [1, 4, 7];
