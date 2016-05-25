@@ -26,12 +26,12 @@ $(window).on('scroll', function () {
         changeConditionNavigationButton(nodeInNavigation +("[href='#pozycjaFunkcje']"));
     }
 
-    if (scrollTop > 1000 && scrollTop < 1300) {
+    if (scrollTop > 1400 && scrollTop < 1600) {
 
         changeConditionNavigationButton(nodeInNavigation +("[href='#pozycjaZespol']"));
     }
 
-    if (scrollTop > 1400 && scrollTop < 1600) {
+    if (scrollTop > 800 && scrollTop < 1300) {
 
         changeConditionNavigationButton(nodeInNavigation +("[href='#pozycjaFormularz']"));
     }
