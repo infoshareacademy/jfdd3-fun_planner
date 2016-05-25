@@ -48,20 +48,22 @@ function createTable(width, height) {
     return $table;
 }
 
-function getStartPointY () {
-    var yPos = [1, 4, 7];
-    return yPos[Math.round((Math.random() * 2))];
-}
 
-function getStartPointX () {
-    var xPos = Math.round((Math.random() * 10));
-    return xPos;
-}
-
-var Y = getStartPointY ();
-var X = getStartPointX ();
 
 function moveClient () {
+
+    var Y = getStartPointY ();
+    var X = getStartPointX ();
+
+    function getStartPointY () {
+        var yPos = [1, 4, 7];
+        return yPos[Math.round((Math.random() * 2))];
+    }
+
+    function getStartPointX () {
+        var xPos = Math.round((Math.random() * 2));
+        return xPos;
+    }
 
     var move = setInterval (function() {
         if (X <17) {
@@ -71,19 +73,27 @@ function moveClient () {
             console.log(X);
         } else {
             clearInterval(move);
-            alert('koniec');
+            //alert('koniec');
             $("tr:eq("+Y+") td:eq("+X+")").removeClass('red');
 
         }
     }, 500);
 
+    console.log(X);
 
 }
 
+function addClient () {
+    setInterval(function () {
+            moveClient();
+    }, 1000);
+    //clearInterval(add);
+}
+
 $przyciskNowaGra.on('click', function(){
-    moveClient ();
+    addClient();
 });
 
-console.log(X);
+
 
 
