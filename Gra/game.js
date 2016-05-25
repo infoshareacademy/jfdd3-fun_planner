@@ -5,6 +5,9 @@
 'use strict';
 
 var $przyciskNowaGra = $('<button>').html("Nowa Gra");
+var $BarmanPoz1,
+    $BarmanPoz2,
+    $BarmanPoz3;
 
 $("#zacznijgre").on("click", function () {
     var $container,
@@ -21,6 +24,9 @@ $("#zacznijgre").on("click", function () {
     $container = $('#AfterBeer');
 
     $gameBoard = createTable(20, 10);
+
+    $BarmanPoz1 = $('td[x=' + 3 +'][y=' +3 +']');
+    $BarmanPoz1.addClass('barman');
 
     $container.append($przyciskNowaGra);
     $container.append($gameBoard);
@@ -39,7 +45,8 @@ function createTable(width, height) {
         $tr = $('<tr>');
         for (var x = 0; x < width; x += 1) {
             $td = $('<td>');
-            $td.addClass('cell').attr("pozY", y).attr("pozX", x);
+            $td.addClass('cell').attr('x', x).attr('y', y);
+            //$td.attr("id",y+'x'+x);
             $tr.append($td);
         }
         $table.append($tr);
@@ -92,8 +99,22 @@ function addClient () {
 
 $przyciskNowaGra.on('click', function(){
     addClient();
+
+
+function ruchBarmana (whichKey) {
+    console.log(event.which);
+}
+
+function ustawBarmana () {
+
+}
+
+$przyciskNowaGra.on('click', function(){
+    //moveClient ();
+
+    $(document).keydown(function(event){
+        event.preventDefault();
+        ruchBarmana(event.which);
+    });
 });
-
-
-
 
