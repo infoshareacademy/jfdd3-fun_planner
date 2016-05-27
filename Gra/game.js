@@ -60,27 +60,27 @@ function createTable(width, height) {
 function moveClient () {
 
     var Y = getStartPointY ();
-    var X = getStartPointX ();
+    var X = 0;
 
     function getStartPointY () {
         var yPos = [1, 4, 7];
         return yPos[Math.round((Math.random() * 2))];
     }
 
-    function getStartPointX () {
-        var xPos = Math.round((Math.random() * 2));
+    /*function getStartPointX () {
+        var xPos = Math.round((Math.random() ));
         return xPos;
-    }
+    }*/
 
     var move = setInterval (function() {
         if (X <17) {
             $("tr:eq("+Y+") td:eq("+X+")").removeClass('red');
             X ++;
             $("tr:eq("+Y+") td:eq("+X+")").addClass('red');
-            //console.log(X);
+
         } else {
             clearInterval(move);
-            //alert('koniec');
+
             $("tr:eq("+Y+") td:eq("+X+")").removeClass('red');
 
         }
@@ -116,7 +116,7 @@ function actionBartender(key){
             moveDown();
             break;
         case 32:
-            servBeer();
+            moveBeer();
             break;
     }
 }
@@ -152,9 +152,27 @@ function moveDown() {
     }
     $Position.addClass('barman');
 }
+function moveBeer () {
 
-function servBeer() {
-    console.log('PIWO');
+    var Y = $Position.prop('y');
+    console.log(Y);
+    var X = 17;
+
+        var piwo = setInterval(function () {
+            if (X > 0) {
+                $("tr:eq(" + Y + ") td:eq(" + X + ")").removeClass('piwo');
+                X--;
+                $("tr:eq(" + Y + ") td:eq(" + X + ")").addClass('piwo');
+
+            } else {
+                clearInterval(piwo);
+
+                $("tr:eq(" + Y + ") td:eq(" + X + ")").removeClass('piwo');
+
+            }
+        }, 200);
+        console.log('lejToPIWO');
+
 }
 
 $przyciskNowaGra.on('click', function(){
