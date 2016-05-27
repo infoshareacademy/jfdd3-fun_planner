@@ -7,7 +7,8 @@
 var $przyciskNowaGra = $('<button>').html("Nowa Gra");
 var $BarmanPoz1,
     $BarmanPoz2,
-    $BarmanPoz3;
+    $BarmanPoz3,
+    $Position;
 
 $("#zacznijgre").on("click", function () {
     var $container,
@@ -25,14 +26,13 @@ $("#zacznijgre").on("click", function () {
 
     $gameBoard = createTable(20, 10);
 
-    $BarmanPoz1 = $('td[x=' + 3 +'][y=' +3 +']');
-    $BarmanPoz1.addClass('barman');
+
 
     $container.append($przyciskNowaGra);
     $container.append($gameBoard);
 
-});
 
+});
 
 
 
@@ -77,7 +77,7 @@ function moveClient () {
             $("tr:eq("+Y+") td:eq("+X+")").removeClass('red');
             X ++;
             $("tr:eq("+Y+") td:eq("+X+")").addClass('red');
-            console.log(X);
+            //console.log(X);
         } else {
             clearInterval(move);
             //alert('koniec');
@@ -86,7 +86,7 @@ function moveClient () {
         }
     }, 500);
 
-    console.log(X);
+    //console.log(X);
 
 }
 
@@ -97,24 +97,73 @@ function addClient () {
     //clearInterval(add);
 }
 
+function addBartender() {
+    $BarmanPoz1 = $('td[x=' + 18 +'][y=' + 8 +']');
+    $BarmanPoz2 = $('td[x=' + 18 +'][y=' + 5 +']');
+    $BarmanPoz3 = $('td[x=' + 18 +'][y=' + 2 +']');
+    //$BarmanPoz1.addClass('barman');
+    $Position = $BarmanPoz1;
+    $Position.addClass('barman');
+}
+
+function actionBartender(key){
+
+    switch (key) {
+        case 38:
+            moveUp();
+            break;
+        case 40:
+            moveDown();
+            break;
+        case 32:
+            servBeer();
+            break;
+    }
+}
+
+function moveUp() {
+    $Position.removeClass('barman');
+    switch ($Position) {
+        case $BarmanPoz1:
+            $Position = $BarmanPoz2;
+            break;
+        case $BarmanPoz2:
+            $Position = $BarmanPoz3;
+            break;
+        case $BarmanPoz3:
+            console.log('Wyzej sie nie da!');
+            break;
+    }
+    $Position.addClass('barman');
+}
+
+function moveDown() {
+    $Position.removeClass('barman');
+    switch ($Position) {
+        case $BarmanPoz1:
+            console.log('Nizej sie nie da');
+            break;
+        case $BarmanPoz2:
+            $Position = $BarmanPoz1;
+            break;
+        case $BarmanPoz3:
+            $Position = $BarmanPoz2;
+            break;
+    }
+    $Position.addClass('barman');
+}
+
+function servBeer() {
+    console.log('PIWO');
+}
+
 $przyciskNowaGra.on('click', function(){
     addClient();
-
-
-function ruchBarmana (whichKey) {
-    console.log(event.which);
-}
-
-function ustawBarmana () {
-
-}
-
-$przyciskNowaGra.on('click', function(){
-    //moveClient ();
+    addBartender();
 
     $(document).keydown(function(event){
         event.preventDefault();
-        ruchBarmana(event.which);
+        actionBartender(event.which);
     });
 });
 
