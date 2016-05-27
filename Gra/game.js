@@ -154,7 +154,7 @@ function moveDown() {
 }
 function moveBeer () {
 
-    var Y = $Position.prop('y');
+    var Y = $Position.attr('y');
     console.log(Y);
     var X = 17;
 
@@ -170,7 +170,7 @@ function moveBeer () {
                 $("tr:eq(" + Y + ") td:eq(" + X + ")").removeClass('piwo');
 
             }
-        }, 200);
+        }, 100);
         console.log('lejToPIWO');
 
 }
