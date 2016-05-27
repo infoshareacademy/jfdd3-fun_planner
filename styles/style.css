@@ -1,5 +1,5 @@
 body {
-    margin: 0;
+    margin: 0 auto;
     padding: 0;
     font-family: 'Oswald', sans-serif;
     font-size: 20px;
@@ -19,6 +19,8 @@ header {
     right:0;
     top:0;
     z-index: 1000;
+    max-width: 1920px;
+    margin: 0 auto;
 }
 
 .navigation {
@@ -36,13 +38,15 @@ header {
 }
 
 .container {
-    width: 1000px;
-    margin-left: auto;
-    margin-right: auto;
+    width: 100%;
+    text-align: center;
+    max-width: 1920px;
+    margin: 0 auto;
 }
 
 nav {
     float: right;
+    margin-right: 10%;
 }
 
 nav li {
@@ -82,6 +86,7 @@ nav li a:hover {
     color: #e7e7e7;
     font-weight: 400;
     font-size: 50px;
+    margin-left: 20%;
 }
 
 span.logo-fun {
@@ -105,41 +110,47 @@ main {
 .zajawka {
     position: relative;
     height: 600px;
+    width: 100%;
+    max-width: 1920px;
 }
 
 .pod-zajawka {
     padding-top: 200px;
     height: 400px;
+    width: 100%;
     background-size: cover;
     position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
+    margin: 0 auto;
+    text-align: center;
 }
 
 .zajawka-1 {
     background-image: url("../images/fota-glowna.jpeg");
+    margin: 0 auto;
 }
 
 .zajawka-2 {
     background-image: url("../images/fota-glowna2.jpeg");
+    margin: 0 auto;
 }
 
 .zajawka-3 {
     background-image: url("../images/fota-glowna3.jpeg");
+    margin: 0 auto;
 }
 
 .container-zajaw {
-    padding: 30px;
+    padding: 0;
     background-color: rgba(0, 0, 0, 0.4);
     position: relative;
     bottom: -70px;
+    max-width: 1920px;
+    margin: 0 auto;
 }
 
 .tekstzajawka {
     font-size: 90px;
-    width: 1000px;
+    width: 100%;
     margin: auto;
     text-align: center;
     color: #f2f2f2;
@@ -155,7 +166,7 @@ span.tekstzajawka {
     font-size: 30px;
     font-weight: 400;
     letter-spacing: 1px;
-    line-height: 30%;
+    line-height: 120%;
 }
 
 .zajawka a {
@@ -199,14 +210,18 @@ span.tekstzajawka {
 
 .container-funkcje {
     margin-top: 20px;
-    width: 1000px;
+    width: 100%;
     margin-left: auto;
     margin-right: auto;
+    text-align: center;
+    max-width: 1920px;
 }
 
 .title-function-h-elements {
     color: #8cc63f;
     margin-top: 35px;
+    text-align: left;
+    margin-left: 20%;
 }
 
 .functions-box {
@@ -242,6 +257,7 @@ span.tekstzajawka {
     vertical-align: top;
     padding: 50px 20px;
     text-align: justify;
+    margin: auto;
 }
 
 .team-fota {
@@ -287,6 +303,8 @@ span.tekstzajawka {
 .formularz {
     height: 350px;
     background-color: #878787;
+    max-width: 1920px;
+    margin: 0 auto;
 }
 
 .formularz form {
