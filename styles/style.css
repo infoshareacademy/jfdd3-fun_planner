@@ -86,7 +86,7 @@ nav li a:hover {
     color: #e7e7e7;
     font-weight: 400;
     font-size: 50px;
-    margin-left: 20%;
+    margin-left: 15%;
 }
 
 span.logo-fun {
@@ -226,7 +226,7 @@ span.tekstzajawka {
 
 .functions-box {
     display: inline-block;
-    width: 436px;
+    width: 35%;
     color: #878787;
     padding: 20px 30px;
     vertical-align: top;
@@ -252,7 +252,7 @@ span.tekstzajawka {
 
 .team-box {
     color: #878787;
-    width: 204px;
+    width: 17%;
     display: inline-block;
     vertical-align: top;
     padding: 50px 20px;
