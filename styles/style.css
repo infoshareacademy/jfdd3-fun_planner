@@ -226,7 +226,7 @@ span.tekstzajawka {
 
 .functions-box {
     display: inline-block;
-    width: 436px;
+    width: 35%;
     color: #878787;
     padding: 20px 30px;
     vertical-align: top;
@@ -252,7 +252,7 @@ span.tekstzajawka {
 
 .team-box {
     color: #878787;
-    width: 204px;
+    width: 17%;
     display: inline-block;
     vertical-align: top;
     padding: 50px 20px;
