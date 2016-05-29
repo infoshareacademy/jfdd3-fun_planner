@@ -74,14 +74,14 @@ function moveClient () {
 
     var move = setInterval (function() {
         if (X <17) {
-            $("tr:eq("+Y+") td:eq("+X+")").removeClass('red');
+            $("tr:eq("+Y+") td:eq("+X+")").removeClass('klient');
             X ++;
-            $("tr:eq("+Y+") td:eq("+X+")").addClass('red');
+            $("tr:eq("+Y+") td:eq("+X+")").addClass('klient').data('IntervalName', move);
 
         } else {
             clearInterval(move);
 
-            $("tr:eq("+Y+") td:eq("+X+")").removeClass('red');
+            $("tr:eq("+Y+") td:eq("+X+")").removeClass('klient');
 
         }
     }, 500);
@@ -152,18 +152,46 @@ function moveDown() {
     }
     $Position.addClass('barman');
 }
+
+function grabBeer (rzad, kolumna, interval) {
+    var rzadKlienta = rzad-1,
+        hitClient = false;
+
+    // console.log(rzadKlienta + ', ' + kolumna );
+    if( $("tr:eq(" + rzadKlienta + ") td:eq(" + kolumna + ")").hasClass('klient')) {
+        // console.log('ok');
+        var StopMove =  $("tr:eq(" + rzadKlienta + ") td:eq(" + kolumna + ")").data('IntervalName');
+        clearInterval(StopMove);
+        $("tr:eq(" + rzadKlienta + ") td:eq(" + kolumna + ")").removeClass('klient');
+
+        clearInterval(interval);
+        $("tr:eq(" + rzad + ") td:eq(" + kolumna + ")").removeClass('piwo');
+        hitClient = true;
+        addPoint();
+    }
+    return hitClient
+}
+
+function addPoint() {
+    console.log('Zdobyles punkt!');
+
+}
+
 function moveBeer () {
 
     var Y = $Position.attr('y');
-    console.log(Y);
     var X = 17;
+    var stopBeer;
 
         var piwo = setInterval(function () {
             if (X > 0) {
                 $("tr:eq(" + Y + ") td:eq(" + X + ")").removeClass('piwo');
-                X--;
-                $("tr:eq(" + Y + ") td:eq(" + X + ")").addClass('piwo');
-
+                stopBeer = grabBeer(Y,X,piwo);
+                if (stopBeer===false) {
+                    X--;
+                    $("tr:eq(" + Y + ") td:eq(" + X + ")").addClass('piwo');
+                    grabBeer(Y, X, piwo);
+                }
             } else {
                 clearInterval(piwo);
 
