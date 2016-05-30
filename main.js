@@ -29,9 +29,9 @@ function zmianaTla (){
     });
 }
 
-//zmianaTla();
+zmianaTla();
 
-//var InterwalowaZmianaTla = setInterval(zmianaTla, 12000);
+var InterwalowaZmianaTla = setInterval(zmianaTla, 12000);
 
 
 $(document).ready(function(){
