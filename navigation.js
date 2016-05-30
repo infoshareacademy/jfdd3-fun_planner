@@ -6,7 +6,6 @@ function changeConditionNavigationButton(nodeAtags) {
 
         $(nodeInNavigation).removeClass();
         $(nodeAtags).addClass('nav-clicked');
-
 }
 
 $(document).ready(function() {

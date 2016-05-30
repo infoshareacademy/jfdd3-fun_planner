@@ -4,7 +4,6 @@
  */
 'use strict';
 
-
 var oldSetInterval = setInterval;
 var intervalIds = [];
 var setInterval = function(f, delay) {
@@ -27,7 +26,6 @@ $("#zacznijgre").on("click", function () {
         $gameBoard,
         $form = $(".formularz");
 
-
     $form.css({
 
         display: "none"
@@ -38,16 +36,10 @@ $("#zacznijgre").on("click", function () {
 
     $gameBoard = createTable(20, 10);
 
-
-
     $container.append($przyciskNowaGra);
     $container.append($gameBoard);
 
-
 });
-
-
-
 
 function createTable(width, height) {
     var $table, $tr, $td;
@@ -66,8 +58,6 @@ function createTable(width, height) {
 
     return $table;
 }
-
-
 
 function moveClient () {
 
@@ -217,16 +207,10 @@ function moveBeer () {
 
 }
 
-
 function gameOver () {
     window.alert("PRZEGRANA");
 
     clearAllIntervals();
-
-
-
-
-
 
 }
 $przyciskNowaGra.on('click', function(){
@@ -240,4 +224,3 @@ $przyciskNowaGra.on('click', function(){
         actionBartender(event.which);
     });
 });
-
