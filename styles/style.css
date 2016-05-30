@@ -86,7 +86,7 @@ nav li a:hover {
     color: #e7e7e7;
     font-weight: 400;
     font-size: 50px;
-    margin-left: 15%;
+    margin-left: 10%;
 }
 
 span.logo-fun {
@@ -110,8 +110,9 @@ main {
 .zajawka {
     position: relative;
     height: 600px;
-    width: 100%;
+    /*width: 100%;*/
     max-width: 1920px;
+    margin: 0 auto;
 }
 
 .pod-zajawka {
@@ -221,7 +222,7 @@ span.tekstzajawka {
     color: #8cc63f;
     margin-top: 35px;
     text-align: left;
-    margin-left: 20%;
+    margin-left: 13%;
 }
 
 .functions-box {
