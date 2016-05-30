@@ -274,6 +274,7 @@ span.tekstzajawka {
     background-size: cover;
     background-repeat: no-repeat;
     background-position: -120px 0;
+    margin: 0 auto;
 }
 
 .team2 {
@@ -281,6 +282,7 @@ span.tekstzajawka {
     background-size: cover;
     background-repeat: no-repeat;
     background-position: -55px 0;
+    margin: 0 auto;
 }
 
 .team3 {
@@ -288,6 +290,7 @@ span.tekstzajawka {
     background-size: cover;
     background-repeat: no-repeat;
     background-position: -55px 0;
+    margin: 0 auto;
 }
 
 .team4 {
@@ -295,6 +298,7 @@ span.tekstzajawka {
     background-size: cover;
     background-repeat: no-repeat;
     background-position: 0 0;
+    margin: 0 auto;
 }
 
 /*KONIEC ZESPOL*/
