@@ -37,9 +37,13 @@ $("#zacznijgre").on("click", function () {
 
     $gameBoard = createTable(20, 10);
 
-    $container.append($przyciskNowaGra);
+    //$container.append($przyciskNowaGra);
     $container.append($gameBoard);
-    $('.tableGra').append('<div class="score">Score: ' + score);
+
+
+
+    $gameBoard.append('<div class="score">Score: ' + score);
+    nowaGra(0);
 
 });
 
@@ -211,9 +215,20 @@ function moveBeer () {
 
 }
 
-function gameOver () {
-    window.alert("PRZEGRANA");
+function nowaGra (xxx) {
+    if (xxx === 0) {
+        $('.tableGra').append('<div class="apla-start">');
+        $('.apla-start').append($przyciskNowaGra);
+    }
+    if (xxx === 1) {
+        $('.tableGra').append('<div class="apla-loose">');
+        $('.apla-loose').append($przyciskNowaGra);
+    }
+}
 
+function gameOver () {
+    //window.alert("PRZEGRANA");
+    nowaGra(1);
     clearAllIntervals();
     score = 0;
     $('div.score').html('Score: ' + score);
@@ -221,6 +236,9 @@ function gameOver () {
     $(document).off('keydown');
 }
 $przyciskNowaGra.on('click', function(){
+    $('.apla-start').css({display: "none"});
+    $('.apla-loose').css({display: "none"});
+
     $(".klient, .piwo, .barman").attr("class", "").addClass("cell");
 
     addClient();
