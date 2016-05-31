@@ -20,6 +20,7 @@ var $BarmanPoz1,
     $BarmanPoz2,
     $BarmanPoz3,
     $Position;
+var score = 0;
 
 $("#zacznijgre").on("click", function () {
     var $container,
@@ -38,6 +39,7 @@ $("#zacznijgre").on("click", function () {
 
     $container.append($przyciskNowaGra);
     $container.append($gameBoard);
+    $('.tableGra').append('<div class="score">Score: ' + score);
 
 });
 
@@ -87,7 +89,7 @@ function moveClient () {
 
             gameOver()
         }
-    }, 500);
+    }, 200);
 
     //console.log(X);
 
@@ -96,7 +98,7 @@ function moveClient () {
 function addClient () {
     setInterval(function () {
             moveClient();
-    }, 1000);
+    }, 700);
     //clearInterval(add);
 }
 
@@ -176,7 +178,9 @@ function grabBeer (rzad, kolumna, interval) {
 }
 
 function addPoint() {
-    console.log('Zdobyles punkt!');
+
+    score += 10;
+    $('div.score').html('Score: ' + score);
 
 }
 
@@ -211,6 +215,9 @@ function gameOver () {
     window.alert("PRZEGRANA");
 
     clearAllIntervals();
+    score = 0;
+    $('div.score').html('Score: ' + score);
+
     $(document).off('keydown');
 }
 $przyciskNowaGra.on('click', function(){
