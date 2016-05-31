@@ -4,6 +4,10 @@
  */
 'use strict';
 
+
+var musicTheme;
+var musicBeer;
+var crashBeer;
 var oldSetInterval = setInterval;
 var intervalIds = [];
 var setInterval = function(f, delay) {
@@ -190,6 +194,11 @@ function moveBeer () {
     var X = 18;
     var stopBeer;
 
+    musicBeer= new Audio('beer.mp3');
+
+    musicBeer.play();
+
+
         var piwo = setInterval(function () {
             if (X > 0) {
                 $("tr:eq(" + Y + ") td:eq(" + X + ")").removeClass('piwo');
@@ -203,28 +212,50 @@ function moveBeer () {
                 clearInterval(piwo);
 
                 $("tr:eq(" + Y + ") td:eq(" + X + ")").removeClass('piwo');
-                gameOver()
+                crashBeer = new Audio('crash.mp3');
+
+                crashBeer.play();
+                gameOver();
 
             }
         }, 100);
+
         console.log('lejToPIWO');
+
 
 }
 
 function gameOver () {
-    window.alert("PRZEGRANA");
+
+    musicTheme.pause();
+    //window.alert("PRZEGRANA");
+
 
     clearAllIntervals();
+
     score = 0;
     $('div.score').html('Score: ' + score);
 
     $(document).off('keydown');
+
 }
+
+
+
+
 $przyciskNowaGra.on('click', function(){
     $(".klient, .piwo, .barman").attr("class", "").addClass("cell");
 
+
+
+    musicTheme = new Audio('theme.mp3');
+
+    musicTheme.play();
+
+
     addClient();
     addBartender();
+
 
     $(document).off('keydown').keydown(function(event){
         event.preventDefault();
