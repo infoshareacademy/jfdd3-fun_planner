@@ -20,6 +20,7 @@ var $BarmanPoz1,
     $BarmanPoz2,
     $BarmanPoz3,
     $Position;
+var score = 0;
 
 $("#zacznijgre").on("click", function () {
     var $container,
@@ -38,6 +39,7 @@ $("#zacznijgre").on("click", function () {
 
     $container.append($przyciskNowaGra);
     $container.append($gameBoard);
+    $('.tableGra').append('<div class="score">Score: ' + score);
 
 });
 
@@ -176,7 +178,14 @@ function grabBeer (rzad, kolumna, interval) {
 }
 
 function addPoint() {
-    console.log('Zdobyles punkt!');
+
+    score += 10;
+    $('div.score').html('Score: ' + score);
+    //$('.tableGra').append('<div class="score">Score: ' + score);
+    //document.getElementById('points').innerText = 'Score: ' + score;
+
+    //return score;
+    console.log(score);
 
 }
 
