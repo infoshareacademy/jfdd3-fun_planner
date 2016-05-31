@@ -432,3 +432,23 @@ span.tekstzajawka {
     height: 30px;
     padding: 10px;
 }
+
+.apla-start {
+    width: 1061px;
+    height: 131px;
+    background-color: #8cc63f;
+    position: absolute;
+    top: 0;
+    text-align: center;
+    padding-top: 400px;
+}
+
+.apla-loose {
+    width: 1061px;
+    height: 131px;
+    background-color: #ff0000;
+    position: absolute;
+    top: 0;
+    text-align: center;
+    padding-top: 400px;
+}
