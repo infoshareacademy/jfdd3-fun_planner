@@ -89,7 +89,7 @@ function moveClient () {
 
             gameOver()
         }
-    }, 500);
+    }, 200);
 
     //console.log(X);
 
@@ -98,7 +98,7 @@ function moveClient () {
 function addClient () {
     setInterval(function () {
             moveClient();
-    }, 1000);
+    }, 700);
     //clearInterval(add);
 }
 
