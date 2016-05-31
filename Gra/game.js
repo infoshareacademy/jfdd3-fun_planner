@@ -181,12 +181,6 @@ function addPoint() {
 
     score += 10;
     $('div.score').html('Score: ' + score);
-    //$('.tableGra').append('<div class="score">Score: ' + score);
-    //document.getElementById('points').innerText = 'Score: ' + score;
-
-    //return score;
-    console.log(score);
-
 }
 
 function moveBeer () {
@@ -220,6 +214,8 @@ function gameOver () {
     window.alert("PRZEGRANA");
 
     clearAllIntervals();
+    score = 0;
+    $('div.score').html('Score: ' + score);
 
 }
 $przyciskNowaGra.on('click', function(){
