@@ -4,6 +4,17 @@
  */
 'use strict';
 
+var oldSetInterval = setInterval;
+var intervalIds = [];
+var setInterval = function(f, delay) {
+    var intervalId = oldSetInterval(f, delay);
+    intervalIds.push(intervalId);
+    return intervalId;
+};
+var clearAllIntervals = function () {
+    intervalIds.forEach(clearInterval);
+};
+
 var $przyciskNowaGra = $('<button>').html("Nowa Gra");
 var $BarmanPoz1,
     $BarmanPoz2,
@@ -15,7 +26,6 @@ $("#zacznijgre").on("click", function () {
         $gameBoard,
         $form = $(".formularz");
 
-
     $form.css({
 
         display: "none"
@@ -26,16 +36,10 @@ $("#zacznijgre").on("click", function () {
 
     $gameBoard = createTable(20, 10);
 
-
-
     $container.append($przyciskNowaGra);
     $container.append($gameBoard);
 
-
 });
-
-
-
 
 function createTable(width, height) {
     var $table, $tr, $td;
@@ -54,8 +58,6 @@ function createTable(width, height) {
 
     return $table;
 }
-
-
 
 function moveClient () {
 
@@ -83,6 +85,7 @@ function moveClient () {
 
             $("tr:eq("+Y+") td:eq("+X+")").removeClass('klient');
 
+            gameOver()
         }
     }, 500);
 
@@ -180,7 +183,7 @@ function addPoint() {
 function moveBeer () {
 
     var Y = $Position.attr('y');
-    var X = 17;
+    var X = 18;
     var stopBeer;
 
         var piwo = setInterval(function () {
@@ -196,6 +199,7 @@ function moveBeer () {
                 clearInterval(piwo);
 
                 $("tr:eq(" + Y + ") td:eq(" + X + ")").removeClass('piwo');
+                gameOver()
 
             }
         }, 100);
@@ -203,13 +207,20 @@ function moveBeer () {
 
 }
 
+function gameOver () {
+    window.alert("PRZEGRANA");
+
+    clearAllIntervals();
+
+}
 $przyciskNowaGra.on('click', function(){
+    $(".klient, .piwo, .barman").attr("class", "").addClass("cell");
+
     addClient();
     addBartender();
 
-    $(document).keydown(function(event){
+    $(document).off('keydown').keydown(function(event){
         event.preventDefault();
         actionBartender(event.which);
     });
 });
-

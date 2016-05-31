@@ -68,7 +68,7 @@ nav li a:hover {
     text-decoration: none;
     font-weight: 400;
     font-size: 15px;
-    border-bottom: solid 3px #c0bcc1;
+    border-bottom: solid 3px #640004;
     /*cursor: pointer;*/
 }
 
@@ -86,7 +86,7 @@ nav li a:hover {
     color: #e7e7e7;
     font-weight: 400;
     font-size: 50px;
-    margin-left: 15%;
+    margin-left: 10%;
 }
 
 span.logo-fun {
@@ -110,8 +110,9 @@ main {
 .zajawka {
     position: relative;
     height: 600px;
-    width: 100%;
+    /*width: 100%;*/
     max-width: 1920px;
+    margin: 0 auto;
 }
 
 .pod-zajawka {
@@ -221,7 +222,7 @@ span.tekstzajawka {
     color: #8cc63f;
     margin-top: 35px;
     text-align: left;
-    margin-left: 20%;
+    margin-left: 13%;
 }
 
 .functions-box {
@@ -273,6 +274,7 @@ span.tekstzajawka {
     background-size: cover;
     background-repeat: no-repeat;
     background-position: -120px 0;
+    margin: 0 auto;
 }
 
 .team2 {
@@ -280,6 +282,7 @@ span.tekstzajawka {
     background-size: cover;
     background-repeat: no-repeat;
     background-position: -55px 0;
+    margin: 0 auto;
 }
 
 .team3 {
@@ -287,6 +290,7 @@ span.tekstzajawka {
     background-size: cover;
     background-repeat: no-repeat;
     background-position: -55px 0;
+    margin: 0 auto;
 }
 
 .team4 {
@@ -294,6 +298,7 @@ span.tekstzajawka {
     background-size: cover;
     background-repeat: no-repeat;
     background-position: 0 0;
+    margin: 0 auto;
 }
 
 /*KONIEC ZESPOL*/

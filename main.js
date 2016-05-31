@@ -39,8 +39,6 @@ $(document).ready(function(){
 });
 
 
-
-
 przyciskZmianaTla.on('click', function(event){      //funkcja zmieniająca tło przy użyciu przycisków
     event.preventDefault();
     clearInterval(InterwalowaZmianaTla);
