@@ -181,6 +181,7 @@ function addPoint() {
 
     score += 10;
     $('div.score').html('Score: ' + score);
+
 }
 
 function moveBeer () {
@@ -217,6 +218,7 @@ function gameOver () {
     score = 0;
     $('div.score').html('Score: ' + score);
 
+    $(document).off('keydown');
 }
 $przyciskNowaGra.on('click', function(){
     $(".klient, .piwo, .barman").attr("class", "").addClass("cell");
