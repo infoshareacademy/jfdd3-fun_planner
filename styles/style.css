@@ -402,6 +402,7 @@ span.tekstzajawka {
 }
 
 .tableGra {
+    position: relative;
     border-collapse: collapse;
     margin: auto;
 }
@@ -416,4 +417,13 @@ span.tekstzajawka {
 
 .piwo {
     background-color: sandybrown;
+}
+
+.score {
+    background-color: #c0bcc1;
+    position: absolute;
+    top: 0;
+    width: 200px;
+    height: 30px;
+    padding: 10px;
 }
