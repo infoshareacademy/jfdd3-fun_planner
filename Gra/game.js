@@ -235,6 +235,8 @@ function nowaGra (xxx) {
     if (xxx === 1) {
         $('.tableGra').append('<div class="apla-loose">');
         $('.apla-loose').append($przyciskNowaGra);
+        $('.apla-loose').append('<div class="apla-loose-finalscore">');
+
     }
 }
 
@@ -242,7 +244,6 @@ function gameOver () {
 
     musicTheme.pause();
     //window.alert("PRZEGRANA");
-
 
     //window.alert("PRZEGRANA");
     nowaGra(1);
@@ -255,6 +256,7 @@ function gameOver () {
 $przyciskNowaGra.on('click', function(){
     $('.apla-start').css({display: "none"});
     $('.apla-loose').css({display: "none"});
+    $('.apla-loose-finalscore').css({display: "none"});
 
     $(".klient, .piwo, .barman").attr("class", "").addClass("cell");
 
