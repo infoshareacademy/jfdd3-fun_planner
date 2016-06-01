@@ -234,8 +234,8 @@ function nowaGra (xxx) {
     }
     if (xxx === 1) {
         $('.tableGra').append('<div class="apla-loose">');
-        $('.apla-loose').append($przyciskNowaGra);
         $('.apla-loose').append('<div class="apla-loose-finalscore">');
+        $('.apla-loose').append($przyciskNowaGra);
 
     }
 }
