@@ -458,3 +458,11 @@ span.tekstzajawka {
     text-align: center;
     padding-top: 400px;
 }
+
+.apla-loose-finalscore {
+    width: 200px;
+    height: 100px;
+    position: absolute;
+    text-align: center;
+    top: 0;
+}
