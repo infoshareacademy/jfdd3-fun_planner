@@ -462,7 +462,11 @@ span.tekstzajawka {
 .apla-loose-finalscore {
     width: 200px;
     height: 100px;
+    background-color: hotpink;
     position: absolute;
     text-align: center;
-    top: 0;
+    top: 200px;
+
+
+
 }
