@@ -301,6 +301,10 @@ span.tekstzajawka {
     margin: 0 auto;
 }
 
+.hide {
+    opacity: 0;
+}
+
 /*KONIEC ZESPOL*/
 
 /*Formularz*/
