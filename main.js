@@ -1,5 +1,28 @@
 'use strict';
 
+
+$(document).ready(function() {
+
+    $(window).scroll(function() {
+
+            $('.hide').each( function(i){
+
+                var bottom_of_object = $(this).offset().top + $(this).outerHeight();
+                var bottom_of_window = $(window).scrollTop() + $(window).height();
+
+                if(bottom_of_window > bottom_of_object) {
+
+                    $(this).animate({'opacity':'1'},2000);
+
+                }
+            });
+        }
+    );
+
+
+});
+
+
 var przyciskZmianaTla = $('.przycisk-zmiana-tla');
 var $zajawka = $('#zajawka4');
 
@@ -68,3 +91,7 @@ przyciskZmianaTla.on('click', function(event){      //funkcja zmieniająca tło 
         opacity: 0
     });
 });
+
+
+
+

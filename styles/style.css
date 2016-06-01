@@ -301,6 +301,10 @@ span.tekstzajawka {
     margin: 0 auto;
 }
 
+.hide {
+    opacity: 0;
+}
+
 /*KONIEC ZESPOL*/
 
 /*Formularz*/
@@ -417,11 +421,13 @@ span.tekstzajawka {
 }
 
 .barman {
-    background-color: green;
+    background-image: url("../barman.jpg");
+    background-size: cover;
 }
 
 .piwo {
-    background-color: sandybrown;
+    background-image: url("../piwo.jpg");
+    background-size: cover;
 }
 
 .score {
