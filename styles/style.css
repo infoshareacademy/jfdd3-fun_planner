@@ -201,10 +201,15 @@ span.tekstzajawka {
     right: 0;
 }
 
-.slider i {
-    color: #d6d6d6;
+.swiec {
+    color: #8cc63f;
 }
-
+.nieswiec {
+    color: #ffffff;
+}
+.ukryte {
+    opacity: 0;
+}
 /*Koniec zajawki*/
 
 /*Funkcje*/
