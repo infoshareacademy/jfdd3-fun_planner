@@ -30,23 +30,16 @@ $("#zacznijgre").on("click", function () {
     var $container,
         $gameBoard,
         $form = $(".formularz");
-
-    $form.css({
-
+        $form.css({
         display: "none"
-
     });
 
     $container = $('#AfterBeer');
-
     $gameBoard = createTable(20, 10);
-
     $container.append($gameBoard);
-
     $gameBoard.append('<div class="score">Score: ' + score);
 
     nowaGra(0);
-
 });
 
 function createTable(width, height) {
@@ -87,8 +80,6 @@ function moveClient () {
             $("tr:eq("+Y+") td:eq("+X+")").addClass(typeOfClient).data('IntervalName', move);
             $("tr:eq("+Y+") td:eq("+X+")").data('ClientName', typeOfClient);
 
-
-
         } else {
             clearInterval(move);
 
@@ -97,8 +88,6 @@ function moveClient () {
             gameOver()
         }
     }, clientTime);
-
-
 }
 
 function addClient () {
@@ -175,8 +164,6 @@ function grabBeer (rzad, kolumna, interval) {
         // console.log('ok');
         var StopMove =  $("tr:eq(" + rzadKlienta + ") td:eq(" + kolumna + ")").data('IntervalName');
 
-
-
         clearInterval(StopMove);
         $("tr:eq(" + rzadKlienta + ") td:eq(" + kolumna + ")").removeClass(typeOfClient);
 
@@ -199,7 +186,6 @@ function addPoint() {
     } else if (score <= 300) {
         clientTime = 100;
     }
-
 }
 
 function moveBeer () {
@@ -209,9 +195,7 @@ function moveBeer () {
     var stopBeer;
 
     musicBeer= new Audio('beer.mp3');
-
     musicBeer.play();
-
 
         var piwo = setInterval(function () {
             if (X > 0) {
@@ -230,11 +214,9 @@ function moveBeer () {
 
                 crashBeer.play();
                 gameOver();
-
             }
         }, 100);
         console.log('lejToPIWO');
-
 }
 
 function nowaGra (status) {
@@ -247,11 +229,9 @@ function nowaGra (status) {
         $('.apla-loose').append('<div class="apla-comment-result">');
         $('div.apla-comment-result').text(comment);
 
-
         $('.apla-loose').append('<div class="apla-loose-finalscore">');
         $('.apla-loose-finalscore').append($('div.score').text());
         $('.apla-loose').append($przyciskNowaGra);
-
     }
 }
 
@@ -259,7 +239,7 @@ function chooseComment (score) {
     if (score <= 100) {
         comment = 'Słabo, spróbuj jeszcze raz!';
     } else if (score <= 200) {
-        comment = 'Może być. Pij więcej';
+        comment = 'Może być. Pij więcej!';
     } else if (score <= 300) {
         comment = 'Brawo, szot dla Ciebie!';
     } else if (score > 300) {
@@ -271,9 +251,7 @@ function chooseComment (score) {
 function gameOver () {
 
     musicTheme.pause();
-    //window.alert("PRZEGRANA");
 
-    //window.alert("PRZEGRANA");
     chooseComment(score);
     clientTime = 400;
     nowaGra(1);
@@ -290,12 +268,9 @@ $przyciskNowaGra.on('click', function(){
 
     $(".klient, .piwo, .barman, .client1, .client2, .client3").attr("class", "").addClass("cell");
 
-
-
     musicTheme = new Audio('theme.mp3');
 
     musicTheme.play();
-
 
     addClient();
     addBartender();
