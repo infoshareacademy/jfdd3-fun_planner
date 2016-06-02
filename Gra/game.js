@@ -1,7 +1,3 @@
-
-/**
- * Created by robert on 24.05.16.
- */
 'use strict';
 
 var comment;
@@ -10,6 +6,7 @@ var musicBeer;
 var crashBeer;
 var oldSetInterval = setInterval;
 var intervalIds = [];
+
 var setInterval = function(f, delay) {
     var intervalId = oldSetInterval(f, delay);
     intervalIds.push(intervalId);
@@ -20,10 +17,12 @@ var clearAllIntervals = function () {
 };
 
 var $przyciskNowaGra = $('<button>').html("Nowa Gra");
+
 var $BarmanPoz1,
     $BarmanPoz2,
     $BarmanPoz3,
     $Position;
+
 var score = 0;
 
 $("#zacznijgre").on("click", function () {
@@ -41,12 +40,10 @@ $("#zacznijgre").on("click", function () {
 
     $gameBoard = createTable(20, 10);
 
-    //$container.append($przyciskNowaGra);
     $container.append($gameBoard);
 
-
-
     $gameBoard.append('<div class="score">Score: ' + score);
+
     nowaGra(0);
 
 });
@@ -79,27 +76,27 @@ function moveClient () {
         return yPos[Math.round((Math.random() * 2))];
     }
 
-    /*function getStartPointX () {
-        var xPos = Math.round((Math.random() ));
-        return xPos;
-    }*/
+    var typeOfClientRandom = ['client1', 'client2', 'client3'];
+    var typeOfClient = typeOfClientRandom[Math.round(Math.random() * 2)];
 
     var move = setInterval (function() {
         if (X <17) {
-            $("tr:eq("+Y+") td:eq("+X+")").removeClass('klient');
+            $("tr:eq("+Y+") td:eq("+X+")").removeClass(typeOfClient);
             X ++;
-            $("tr:eq("+Y+") td:eq("+X+")").addClass('klient').data('IntervalName', move);
+            $("tr:eq("+Y+") td:eq("+X+")").addClass(typeOfClient).data('IntervalName', move);
+            $("tr:eq("+Y+") td:eq("+X+")").data('ClientName', typeOfClient);
+
+
 
         } else {
             clearInterval(move);
 
-            $("tr:eq("+Y+") td:eq("+X+")").removeClass('klient');
+            $("tr:eq("+Y+") td:eq("+X+")").removeClass(typeOfClient);
 
             gameOver()
         }
     }, 200);
 
-    //console.log(X);
 
 }
 
@@ -107,7 +104,7 @@ function addClient () {
     setInterval(function () {
             moveClient();
     }, 700);
-    //clearInterval(add);
+
 }
 
 function addBartender() {
@@ -170,12 +167,17 @@ function grabBeer (rzad, kolumna, interval) {
     var rzadKlienta = rzad-1,
         hitClient = false;
 
+    var typeOfClient =  $("tr:eq(" + rzadKlienta + ") td:eq(" + kolumna + ")").data('ClientName');
+
     // console.log(rzadKlienta + ', ' + kolumna );
-    if( $("tr:eq(" + rzadKlienta + ") td:eq(" + kolumna + ")").hasClass('klient')) {
+    if( $("tr:eq(" + rzadKlienta + ") td:eq(" + kolumna + ")").hasClass(typeOfClient)) {
         // console.log('ok');
         var StopMove =  $("tr:eq(" + rzadKlienta + ") td:eq(" + kolumna + ")").data('IntervalName');
+
+
+
         clearInterval(StopMove);
-        $("tr:eq(" + rzadKlienta + ") td:eq(" + kolumna + ")").removeClass('klient');
+        $("tr:eq(" + rzadKlienta + ") td:eq(" + kolumna + ")").removeClass(typeOfClient);
 
         clearInterval(interval);
         $("tr:eq(" + rzad + ") td:eq(" + kolumna + ")").removeClass('piwo');
@@ -227,12 +229,12 @@ function moveBeer () {
 
 }
 
-function nowaGra (xxx) {
-    if (xxx === 0) {
+function nowaGra (status) {
+    if (status === 0) {
         $('.tableGra').append('<div class="apla-start">');
         $('.apla-start').append($przyciskNowaGra);
     }
-    if (xxx === 1) {
+    if (status === 1) {
         $('.tableGra').append('<div class="apla-loose">');
         $('.apla-loose').append('<div class="apla-comment-result">');
         $('div.apla-comment-result').text(comment);
@@ -275,7 +277,7 @@ $przyciskNowaGra.on('click', function(){
     $('.apla-loose').css({display: "none"});
     $('.apla-loose-finalscore').css({display: "none"});
 
-    $(".klient, .piwo, .barman").attr("class", "").addClass("cell");
+    $(".klient, .piwo, .barman, .client1, .client2, .client3").attr("class", "").addClass("cell");
 
 
 
