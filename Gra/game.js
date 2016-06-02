@@ -4,6 +4,7 @@
  */
 'use strict';
 
+var clientTime = 400;
 var comment;
 var musicTheme;
 var musicBeer;
@@ -97,7 +98,7 @@ function moveClient () {
 
             gameOver()
         }
-    }, 200);
+    }, clientTime);
 
     //console.log(X);
 
@@ -189,6 +190,13 @@ function addPoint() {
 
     score += 10;
     $('div.score').html('Score: ' + score);
+    if (score <= 100) {
+        clientTime = 300;
+    } else if (score <= 200) {
+        clientTime = 200;
+    } else if (score <= 300) {
+        clientTime = 100;
+    }
 
 }
 
