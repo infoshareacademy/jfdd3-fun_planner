@@ -4,7 +4,7 @@
  */
 'use strict';
 
-
+var comment;
 var musicTheme;
 var musicBeer;
 var crashBeer;
@@ -234,11 +234,26 @@ function nowaGra (xxx) {
     }
     if (xxx === 1) {
         $('.tableGra').append('<div class="apla-loose">');
+        $('.apla-loose').append('<div class="apla-comment-result">');
+        $('div.apla-comment-result').text(comment);
+
+
         $('.apla-loose').append('<div class="apla-loose-finalscore">');
         $('.apla-loose-finalscore').append($('div.score').text());
         $('.apla-loose').append($przyciskNowaGra);
 
     }
+}
+
+function chooseComment (score) {
+    if (score <= 100) {
+        comment = 'Słabo, spróbuj jeszcze raz!';
+    } else if (score <= 200) {
+        comment = 'Może być. Pij więcej';
+    } else if (score <= 300) {
+        comment = 'Brawo, jesteś gość!';
+    }
+    return comment;
 }
 
 function gameOver () {
@@ -247,6 +262,7 @@ function gameOver () {
     //window.alert("PRZEGRANA");
 
     //window.alert("PRZEGRANA");
+    chooseComment(score);
     nowaGra(1);
     clearAllIntervals();
     score = 0;
