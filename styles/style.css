@@ -201,10 +201,15 @@ span.tekstzajawka {
     right: 0;
 }
 
-.slider i {
-    color: #d6d6d6;
+.swiec {
+    color: #8cc63f;
 }
-
+.nieswiec {
+    color: #ffffff;
+}
+.ukryte {
+    opacity: 0;
+}
 /*Koniec zajawki*/
 
 /*Funkcje*/
@@ -451,10 +456,22 @@ span.tekstzajawka {
 
 .apla-loose {
     width: 1061px;
-    height: 131px;
+    height: 301px;
     background-color: #ff0000;
     position: absolute;
     top: 0;
     text-align: center;
-    padding-top: 400px;
+    padding-top: 230px;
+}
+
+.apla-loose-finalscore {
+    width: 300px;
+    height: 150px;
+    background-color: black;
+    /*position: absolute;*/
+    text-align: center;
+    top: 200px;
+    margin: 0 auto;
+    color: white;
+
 }

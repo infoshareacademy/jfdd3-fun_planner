@@ -4,6 +4,10 @@
  */
 'use strict';
 
+
+var musicTheme;
+var musicBeer;
+var crashBeer;
 var oldSetInterval = setInterval;
 var intervalIds = [];
 var setInterval = function(f, delay) {
@@ -194,6 +198,11 @@ function moveBeer () {
     var X = 18;
     var stopBeer;
 
+    musicBeer= new Audio('beer.mp3');
+
+    musicBeer.play();
+
+
         var piwo = setInterval(function () {
             if (X > 0) {
                 $("tr:eq(" + Y + ") td:eq(" + X + ")").removeClass('piwo');
@@ -207,7 +216,10 @@ function moveBeer () {
                 clearInterval(piwo);
 
                 $("tr:eq(" + Y + ") td:eq(" + X + ")").removeClass('piwo');
-                gameOver()
+                crashBeer = new Audio('crash.mp3');
+
+                crashBeer.play();
+                gameOver();
 
             }
         }, 100);
@@ -222,11 +234,18 @@ function nowaGra (xxx) {
     }
     if (xxx === 1) {
         $('.tableGra').append('<div class="apla-loose">');
+        $('.apla-loose').append('<div class="apla-loose-finalscore">');
+        $('.apla-loose-finalscore').append($('div.score').text());
         $('.apla-loose').append($przyciskNowaGra);
+
     }
 }
 
 function gameOver () {
+
+    musicTheme.pause();
+    //window.alert("PRZEGRANA");
+
     //window.alert("PRZEGRANA");
     nowaGra(1);
     clearAllIntervals();
@@ -238,8 +257,16 @@ function gameOver () {
 $przyciskNowaGra.on('click', function(){
     $('.apla-start').css({display: "none"});
     $('.apla-loose').css({display: "none"});
+    $('.apla-loose-finalscore').css({display: "none"});
 
     $(".klient, .piwo, .barman").attr("class", "").addClass("cell");
+
+
+
+    musicTheme = new Audio('theme.mp3');
+
+    musicTheme.play();
+
 
     addClient();
     addBartender();
