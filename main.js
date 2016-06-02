@@ -1,6 +1,5 @@
 'use strict';
 
-
 $(document).ready(function() {
 
     $(window).scroll(function() {
@@ -11,17 +10,12 @@ $(document).ready(function() {
                 var bottom_of_window = $(window).scrollTop() + $(window).height();
 
                 if(bottom_of_window > bottom_of_object) {
-
                     $(this).animate({'opacity':'1'},2000);
-
                 }
             });
         }
     );
-
-
 });
-
 
 var przyciskZmianaTla = $('.przycisk-zmiana-tla');
 var $zajawka = $('#zajawka4');
@@ -45,7 +39,6 @@ $(document).ready(function() {
 function zmianaTla (){
     $("#zajawka1").delay(5000).fadeOut(4000, function(){
 
-
         $('#zajawka2').delay(5000).fadeOut(4000, function(){
 
             $('#zajawka1').delay(5000).fadeIn(4000, function () {
@@ -60,11 +53,9 @@ zmianaTla();
 
 var InterwalowaZmianaTla = setInterval(zmianaTla, 27000);
 
-
 $(document).ready(function(){
     return InterwalowaZmianaTla;
 });
-
 
 przyciskZmianaTla.on('click', function(event){      //funkcja zmieniająca tło przy użyciu przycisków
     event.preventDefault();

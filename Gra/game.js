@@ -79,7 +79,7 @@ function moveClient () {
             X ++;
             $("tr:eq("+Y+") td:eq("+X+")").addClass(typeOfClient).data('IntervalName', move);
             $("tr:eq("+Y+") td:eq("+X+")").data('ClientName', typeOfClient);
-
+            
         } else {
             clearInterval(move);
 
@@ -163,7 +163,7 @@ function grabBeer (rzad, kolumna, interval) {
     if( $("tr:eq(" + rzadKlienta + ") td:eq(" + kolumna + ")").hasClass(typeOfClient)) {
         // console.log('ok');
         var StopMove =  $("tr:eq(" + rzadKlienta + ") td:eq(" + kolumna + ")").data('IntervalName');
-
+        
         clearInterval(StopMove);
         $("tr:eq(" + rzadKlienta + ") td:eq(" + kolumna + ")").removeClass(typeOfClient);
 
@@ -251,7 +251,7 @@ function chooseComment (score) {
 function gameOver () {
 
     musicTheme.pause();
-
+  
     chooseComment(score);
     clientTime = 400;
     nowaGra(1);
