@@ -411,65 +411,94 @@ span.tekstzajawka {
 .cell {
     width: 50px;
     height: 50px;
-    border: 1px solid #000;
+    /*border: 1px solid rgba(0,0,0,0);*/
 
 }
 
 .tableGra {
     position: relative;
-    border-collapse: collapse;
+    /*border-collapse: collapse;*/
     margin: auto;
+    border: solid 3px #000;
+    background-image: url("../images/game_board.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: #e2ffb8;
 }
 
 .client1 {
-    background-color: red;
+    background-image: url("../images/game_client1.png");
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 .client2 {
-    background-color: green;
+    background-image: url("../images/game_client2.png");
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 .client3 {
-    background-color: blue;
+    background-image: url("../images/game_client3.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.client4 {
+    background-image: url("../images/game_client4.png");
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 .barman {
-    background-image: url("../barman.jpg");
+    background-image: url("../images/game_barman_leg.png");
+    background-repeat: no-repeat;
     background-size: cover;
 }
 
 .piwo {
-    background-image: url("../piwo.jpg");
+    background-image: url("../images/game_beer.png");
+    background-repeat: no-repeat;
     background-size: cover;
 }
 
 .score {
-    background-color: #c0bcc1;
     position: absolute;
     top: 0;
+    left: 0;
     width: 200px;
     height: 30px;
-    padding: 10px;
+    font-size: 25px;
+    font-weight: 900;
+    padding: 7px 40px;
 }
 
 .apla-start {
-    width: 1061px;
-    height: 131px;
+    width: 1045px;
+    height: 125px;
+    background-image: url("../images/game_start.png");
+    background-repeat: no-repeat;
+    background-size: cover;
     background-color: #8cc63f;
     position: absolute;
     top: 0;
+    left: 0;
     text-align: center;
     padding-top: 400px;
 }
 
 .apla-loose {
-    width: 1061px;
-    height: 401px;
+    width: 1045px;
+    height: 325px;
+    background-image: url("../images/game_over.png");
+    background-repeat: no-repeat;
+    background-size: cover;
     background-color: #ff0000;
     position: absolute;
     top: 0;
+    left: 0;
     text-align: center;
-    padding-top: 130px;
+    padding-top: 200px;
 }
 
 .apla-loose-finalscore {
@@ -479,8 +508,9 @@ span.tekstzajawka {
     font-size: 50px;
     /*position: absolute;*/
     text-align: center;
-    top: 200px;
-    margin: 0 auto;
+    top: 50px;
+    /*margin: 0 auto;*/
+    margin-left: 590px;
     color: white;
     border-radius: 30px;
 
@@ -494,7 +524,8 @@ span.tekstzajawka {
     text-align: center;
     font-size: 50px;
     top: 10px;
-    margin: 0 auto;
+    /*margin: 0 auto;*/
+    margin-left: 590px;
     color: white;
     border-radius: 30px;
 

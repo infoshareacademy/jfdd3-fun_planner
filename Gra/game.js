@@ -70,8 +70,8 @@ function moveClient () {
         return yPos[Math.round((Math.random() * 2))];
     }
 
-    var typeOfClientRandom = ['client1', 'client2', 'client3'];
-    var typeOfClient = typeOfClientRandom[Math.round(Math.random() * 2)];
+    var typeOfClientRandom = ['client1', 'client2', 'client3', 'client4'];
+    var typeOfClient = typeOfClientRandom[Math.round(Math.random() * 3)];
 
     var move = setInterval (function() {
         if (X <17) {
@@ -266,7 +266,7 @@ $przyciskNowaGra.on('click', function(){
     $('.apla-loose').css({display: "none"});
     $('.apla-loose-finalscore').css({display: "none"});
 
-    $(".klient, .piwo, .barman, .client1, .client2, .client3").attr("class", "").addClass("cell");
+    $(".piwo, .barman, .client1, .client2, .client3, .client4").attr("class", "").addClass("cell");
 
     musicTheme = new Audio('theme.mp3');
 
