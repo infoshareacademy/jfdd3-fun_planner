@@ -421,8 +421,16 @@ span.tekstzajawka {
     margin: auto;
 }
 
-.klient {
-    background-color: #ff0000;
+.client1 {
+    background-color: red;
+}
+
+.client2 {
+    background-color: green;
+}
+
+.client3 {
+    background-color: blue;
 }
 
 .barman {
