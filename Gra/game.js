@@ -261,7 +261,9 @@ function chooseComment (score) {
     } else if (score <= 200) {
         comment = 'Może być. Pij więcej';
     } else if (score <= 300) {
-        comment = 'Brawo, jesteś gość!';
+        comment = 'Brawo, szot dla Ciebie!';
+    } else if (score > 300) {
+        comment = "Słuchasz Lionela Richie, szacun!";
     }
     return comment;
 }
