@@ -275,6 +275,7 @@ function gameOver () {
 
     //window.alert("PRZEGRANA");
     chooseComment(score);
+    clientTime = 400;
     nowaGra(1);
     clearAllIntervals();
     score = 0;
