@@ -282,7 +282,7 @@ $przyciskNowaGra.on('click', function(){
     $('.apla-loose').css({display: "none"});
     $('.apla-loose-finalscore').css({display: "none"});
 
-    $(".piwo, .barman, .client1, .client2, .client3, .client4").attr("class", "").addClass("cell");
+    $(".piwo, .barman, .barman-head, .client1, .client2, .client3, .client4").attr("class", "").addClass("cell");
 
     musicTheme = new Audio('theme.mp3');
 
