@@ -474,8 +474,8 @@ span.tekstzajawka {
 }
 
 .apla-start {
-    width: 1045px;
-    height: 125px;
+    width: 1082px;
+    height: 164px;
     background-image: url("../images/game_start.png");
     background-repeat: no-repeat;
     background-size: cover;
@@ -484,12 +484,12 @@ span.tekstzajawka {
     top: 0;
     left: 0;
     text-align: center;
-    padding-top: 400px;
+    padding-top: 380px;
 }
 
 .apla-loose {
-    width: 1045px;
-    height: 325px;
+    width: 1082px;
+    height: 344px;
     background-image: url("../images/game_over.png");
     background-repeat: no-repeat;
     background-size: cover;
