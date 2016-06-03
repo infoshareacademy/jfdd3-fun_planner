@@ -411,15 +411,14 @@ span.tekstzajawka {
 .cell {
     width: 50px;
     height: 50px;
-    /*border: 1px solid rgba(0,0,0,0);*/
-
 }
+
 
 .tableGra {
     position: relative;
-    /*border-collapse: collapse;*/
+    border-collapse: collapse;
     margin: auto;
-    border: solid 3px #000;
+    /*border: solid 3px #000;*/
     background-image: url("../images/game_board.png");
     background-repeat: no-repeat;
     background-size: cover;
@@ -479,8 +478,8 @@ span.tekstzajawka {
 }
 
 .apla-start {
-    width: 1082px;
-    height: 164px;
+    width: 1044px;
+    height: 144px;
     background-image: url("../images/game_start.png");
     background-repeat: no-repeat;
     background-size: cover;
@@ -493,8 +492,8 @@ span.tekstzajawka {
 }
 
 .apla-loose {
-    width: 1082px;
-    height: 344px;
+    width: 1044px;
+    height: 324px;
     background-image: url("../images/game_over.png");
     background-repeat: no-repeat;
     background-size: cover;
@@ -511,6 +510,7 @@ span.tekstzajawka {
     height: 82px;
     background-color: black;
     font-size: 50px;
+    font-weight: 900;
     /*position: absolute;*/
     text-align: center;
     top: 50px;
@@ -528,6 +528,7 @@ span.tekstzajawka {
     /*position: absolute;*/
     text-align: center;
     font-size: 50px;
+    font-weight: 700;
     top: 10px;
     /*margin: 0 auto;*/
     margin-left: 590px;
