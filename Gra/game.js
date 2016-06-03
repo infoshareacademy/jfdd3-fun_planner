@@ -247,6 +247,7 @@ function nowaGra (status) {
 
         $('.apla-loose').append('<div class="apla-loose-finalscore">');
         $('.apla-loose-finalscore').append($('div.score').text());
+        $przyciskNowaGra.toggleClass('button-end-game');
         $('.apla-loose').append($przyciskNowaGra);
     }
 }

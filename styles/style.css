@@ -543,4 +543,17 @@ span.tekstzajawka {
     cursor: pointer;
     font-size: 22px;
     border: none;
+    margin-top: 68px;
+}
+
+.button-end-game {
+    background-color: #d6d6d6;
+    height: 50px;
+    width: 135px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 22px;
+    border: none;
+    margin-top: 20px;
+    margin-left: 430px;
 }
