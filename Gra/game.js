@@ -17,7 +17,7 @@ var clearAllIntervals = function () {
     intervalIds.forEach(clearInterval);
 };
 
-var $przyciskNowaGra = $('<button>').html("Nowa Gra");
+var $przyciskNowaGra = $('<button class="button-new-game">').html("Nowa Gra");
 
 var $BarmanPoz1,
     $BarmanPoz2,

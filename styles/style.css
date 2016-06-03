@@ -510,7 +510,6 @@ span.tekstzajawka {
     height: 82px;
     background-color: black;
     font-size: 50px;
-    font-weight: 900;
     /*position: absolute;*/
     text-align: center;
     top: 50px;
@@ -528,11 +527,20 @@ span.tekstzajawka {
     /*position: absolute;*/
     text-align: center;
     font-size: 50px;
-    font-weight: 700;
     top: 10px;
     /*margin: 0 auto;*/
     margin-left: 590px;
     color: white;
     border-radius: 30px;
 
+}
+
+.button-new-game {
+    background-color: #d6d6d6;
+    height: 50px;
+    width: 135px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 22px;
+    border: none;
 }
