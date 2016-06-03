@@ -455,6 +455,11 @@ span.tekstzajawka {
     background-repeat: no-repeat;
     background-size: cover;
 }
+.barman-head {
+    background-image: url("../images/game_barman_head.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
 
 .piwo {
     background-image: url("../images/game_beer.png");

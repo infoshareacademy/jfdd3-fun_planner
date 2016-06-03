@@ -22,7 +22,11 @@ var $przyciskNowaGra = $('<button>').html("Nowa Gra");
 var $BarmanPoz1,
     $BarmanPoz2,
     $BarmanPoz3,
-    $Position;
+    $Position,
+    $BarmanPoz1Head,
+    $BarmanPoz2Head,
+    $BarmanPoz3Head,
+    $PositionHead;
 
 var score = 0;
 
@@ -101,9 +105,13 @@ function addBartender() {
     $BarmanPoz1 = $('td[x=' + 18 +'][y=' + 8 +']');
     $BarmanPoz2 = $('td[x=' + 18 +'][y=' + 5 +']');
     $BarmanPoz3 = $('td[x=' + 18 +'][y=' + 2 +']');
-    //$BarmanPoz1.addClass('barman');
+    $BarmanPoz1Head = $('td[x=' + 18 +'][y=' + 7 +']');
+    $BarmanPoz2Head = $('td[x=' + 18 +'][y=' + 4 +']');
+    $BarmanPoz3Head = $('td[x=' + 18 +'][y=' + 1 +']');
     $Position = $BarmanPoz1;
+    $PositionHead = $BarmanPoz1Head;
     $Position.addClass('barman');
+    $PositionHead.addClass('barman-head');
 }
 
 function actionBartender(key){
@@ -123,34 +131,42 @@ function actionBartender(key){
 
 function moveUp() {
     $Position.removeClass('barman');
+    $PositionHead.removeClass('barman-head');
     switch ($Position) {
         case $BarmanPoz1:
             $Position = $BarmanPoz2;
+            $PositionHead = $BarmanPoz2Head;
             break;
         case $BarmanPoz2:
             $Position = $BarmanPoz3;
+            $PositionHead = $BarmanPoz3Head;
             break;
         case $BarmanPoz3:
             console.log('Wyzej sie nie da!');
             break;
     }
     $Position.addClass('barman');
+    $PositionHead.addClass('barman-head');
 }
 
 function moveDown() {
     $Position.removeClass('barman');
+    $PositionHead.removeClass('barman-head');
     switch ($Position) {
         case $BarmanPoz1:
             console.log('Nizej sie nie da');
             break;
         case $BarmanPoz2:
             $Position = $BarmanPoz1;
+            $PositionHead = $BarmanPoz1Head;
             break;
         case $BarmanPoz3:
             $Position = $BarmanPoz2;
+            $PositionHead = $BarmanPoz2Head;
             break;
     }
     $Position.addClass('barman');
+    $PositionHead.addClass('barman-head');
 }
 
 function grabBeer (rzad, kolumna, interval) {
