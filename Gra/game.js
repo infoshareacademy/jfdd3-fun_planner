@@ -247,7 +247,7 @@ function nowaGra (status) {
 
         $('.apla-loose').append('<div class="apla-loose-finalscore">');
         $('.apla-loose-finalscore').append($('div.score').text());
-        $przyciskNowaGra.toggleClass('button-end-game');
+        $przyciskNowaGra.addClass('button-end-game');
         $('.apla-loose').append($przyciskNowaGra);
     }
 }
@@ -286,6 +286,10 @@ $przyciskNowaGra.on('click', function(){
     $(".piwo, .barman, .barman-head, .client1, .client2, .client3, .client4").attr("class", "").addClass("cell");
 
     musicTheme = new Audio('theme.mp3');
+    musicTheme.addEventListener('ended', function() {
+        this.currentTime = 0;
+        this.play();
+    }, false);
 
     musicTheme.play();
 
