@@ -195,13 +195,13 @@ function addPoint() {
 
     score += 10;
     $('div.score').html('Score: ' + score);
-    if (score <= 50) {
-        clientTime = 400;
-    } else if (score <= 100) {
-        clientTime = 300;
-    } else if (score <= 200) {
+    if (score <= 70) {
+        clientTime = 500;
+    } else if (score <= 120) {
+        clientTime = 350;
+    } else if (score <= 170) {
         clientTime = 200;
-    } else if (score <= 300) {
+    } else if (score <= 320) {
         clientTime = 100;
     } else if (score <= 500) {
         clientTime = 70;
@@ -262,9 +262,11 @@ function chooseComment (score) {
     } else if (score <= 200) {
         comment = 'Może być. Pij więcej!';
     } else if (score <= 300) {
-        comment = 'Brawo, szot dla Ciebie!';
+        comment = 'Brawo, shot dla Ciebie!';
     } else if (score > 300) {
         comment = "Słuchasz Lionela Richie, szacun!";
+    } else if (score > 500) {
+        comment = "Rewelacja! I o to chodzi!";
     }
     return comment;
 }
@@ -274,7 +276,7 @@ function gameOver () {
     musicTheme.pause();
   
     chooseComment(score);
-    clientTime = 400;
+    clientTime = 500;
     nowaGra(1);
     clearAllIntervals();
     score = 0;
