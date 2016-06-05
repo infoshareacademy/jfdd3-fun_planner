@@ -1,6 +1,6 @@
 'use strict';
 
-var clientTime = 400;
+var clientTime = 500;
 var comment;
 var musicTheme;
 var musicBeer;
@@ -195,12 +195,16 @@ function addPoint() {
 
     score += 10;
     $('div.score').html('Score: ' + score);
-    if (score <= 100) {
+    if (score <= 50) {
+        clientTime = 400;
+    } else if (score <= 100) {
         clientTime = 300;
     } else if (score <= 200) {
         clientTime = 200;
     } else if (score <= 300) {
         clientTime = 100;
+    } else if (score <= 500) {
+        clientTime = 70;
     }
 }
 
