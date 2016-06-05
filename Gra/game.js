@@ -4,6 +4,7 @@ var clientTime = 500;
 var comment;
 var musicTheme;
 var musicBeer;
+var musicGameOver;
 var crashBeer;
 var oldSetInterval = setInterval;
 var intervalIds = [];
@@ -274,6 +275,9 @@ function chooseComment (score) {
 function gameOver () {
 
     musicTheme.pause();
+    
+    musicGameOver= new Audio('gameover.mp3');
+    musicGameOver.play();
   
     chooseComment(score);
     clientTime = 500;
