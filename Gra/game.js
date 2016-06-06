@@ -276,31 +276,23 @@ function gameOver () {
 
     musicTheme.pause();
 
-    musicGameOver= new Audio('gameover.mp3');
-    musicGameOver.play();
-
-// function gameOverMusic (score) {
-//     if (score <= 50) {
-//         musicGameOver = new Audio('gameover1.mp3');
-//         musicGameOver.play();
-//     } else if (score <= 100) {
-//         musicGameOver = new Audio('gameover2.mp3');
-//         musicGameOver.play();
-//     } else if (score <= 150) {
-//         musicGameOver = new Audio('gameover3.mp3');
-//         musicGameOver.play();
-//     } else if (score <= 250) {
-//         musicGameOver = new Audio('gameover4.mp3');
-//         musicGameOver.play();
-//     } else if (score <= 350) {
-//         musicGameOver = new Audio('gameover5.mp3');
-//         musicGameOver.play();
-//     } else if (score <= 500) {
-//         musicGameOver = new Audio('gameover6.mp3');
-//         musicGameOver.play();
-//     }
-//     return musicGameOver;
-// }
+ function gameOverMusic (score) {
+     if (score <= 50) {
+         musicGameOver = new Audio('gameover1.mp3');
+     } else if (score <= 100) {
+         musicGameOver = new Audio('gameover2.mp3');
+     } else if (score <= 150) {
+         musicGameOver = new Audio('gameover3.mp3');
+     } else if (score <= 250) {
+         musicGameOver = new Audio('gameover4.mp3');
+     } else if (score <= 350) {
+         musicGameOver = new Audio('gameover5.mp3');
+     } else {
+         musicGameOver = new Audio('gameover6.mp3');
+     }
+     musicGameOver.play();
+ }
+    gameOverMusic(score);
   
     chooseComment(score);
     clientTime = 500;
