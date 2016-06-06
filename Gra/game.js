@@ -15,7 +15,7 @@ var intervalIds = [];
         intervalIds.push(intervalId);
         return intervalId;
     };
-    var clearAllIntervals = function () {
+    window.clearAllIntervals = function () {
         intervalIds.forEach(clearInterval);
     };
 
