@@ -204,9 +204,9 @@ $(document).ready(function () {
         } else if (score <= 170) {
             clientTime = 200;
         } else if (score <= 320) {
-            clientTime = 100;
+            clientTime = 150;
         } else if (score <= 500) {
-            clientTime = 70;
+            clientTime = 100;
         }
     }
 
