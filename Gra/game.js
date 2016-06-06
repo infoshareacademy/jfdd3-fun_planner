@@ -40,7 +40,6 @@ $("#zacznijgre").on("click", function () {
         display: "none"
     });
 
-
     $container = $('#AfterBeer');
     $gameBoard = createTable(20, 10);
     $container.append($gameBoard);
