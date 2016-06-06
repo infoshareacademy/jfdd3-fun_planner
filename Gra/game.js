@@ -237,7 +237,7 @@ $(document).ready(function () {
                 crashBeer.play();
                 gameOver();
             }
-        }, 100);
+        }, 70);
         console.log('lejToPIWO');
     }
 
