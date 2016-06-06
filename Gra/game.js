@@ -1,9 +1,10 @@
 'use strict';
 
-var clientTime = 400;
+var clientTime = 500;
 var comment;
 var musicTheme;
 var musicBeer;
+var musicGameOver;
 var crashBeer;
 var oldSetInterval = setInterval;
 var intervalIds = [];
@@ -195,12 +196,16 @@ function addPoint() {
 
     score += 10;
     $('div.score').html('Score: ' + score);
-    if (score <= 100) {
-        clientTime = 300;
-    } else if (score <= 200) {
+    if (score <= 70) {
+        clientTime = 500;
+    } else if (score <= 120) {
+        clientTime = 350;
+    } else if (score <= 170) {
         clientTime = 200;
-    } else if (score <= 300) {
+    } else if (score <= 320) {
         clientTime = 100;
+    } else if (score <= 500) {
+        clientTime = 70;
     }
 }
 
@@ -258,9 +263,11 @@ function chooseComment (score) {
     } else if (score <= 200) {
         comment = 'Może być. Pij więcej!';
     } else if (score <= 300) {
-        comment = 'Brawo, szot dla Ciebie!';
+        comment = 'Brawo, shot dla Ciebie!';
     } else if (score > 300) {
         comment = "Słuchasz Lionela Richie, szacun!";
+    } else if (score > 500) {
+        comment = "Rewelacja! I o to chodzi!";
     }
     return comment;
 }
@@ -268,9 +275,35 @@ function chooseComment (score) {
 function gameOver () {
 
     musicTheme.pause();
+
+    musicGameOver= new Audio('gameover.mp3');
+    musicGameOver.play();
+
+// function gameOverMusic (score) {
+//     if (score <= 50) {
+//         musicGameOver = new Audio('gameover1.mp3');
+//         musicGameOver.play();
+//     } else if (score <= 100) {
+//         musicGameOver = new Audio('gameover2.mp3');
+//         musicGameOver.play();
+//     } else if (score <= 150) {
+//         musicGameOver = new Audio('gameover3.mp3');
+//         musicGameOver.play();
+//     } else if (score <= 250) {
+//         musicGameOver = new Audio('gameover4.mp3');
+//         musicGameOver.play();
+//     } else if (score <= 350) {
+//         musicGameOver = new Audio('gameover5.mp3');
+//         musicGameOver.play();
+//     } else if (score <= 500) {
+//         musicGameOver = new Audio('gameover6.mp3');
+//         musicGameOver.play();
+//     }
+//     return musicGameOver;
+// }
   
     chooseComment(score);
-    clientTime = 400;
+    clientTime = 500;
     nowaGra(1);
     clearAllIntervals();
     score = 0;
@@ -284,7 +317,7 @@ $przyciskNowaGra.on('click', function(){
     $('.apla-loose-finalscore').css({display: "none"});
 
     $(".piwo, .barman, .barman-head, .client1, .client2, .client3, .client4").attr("class", "").addClass("cell");
-
+    
     musicTheme = new Audio('theme.mp3');
     musicTheme.addEventListener('ended', function() {
         this.currentTime = 0;
