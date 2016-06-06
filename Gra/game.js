@@ -85,7 +85,7 @@ function moveClient () {
             X ++;
             $("tr:eq("+Y+") td:eq("+X+")").addClass(typeOfClient).data('IntervalName', move);
             $("tr:eq("+Y+") td:eq("+X+")").data('ClientName', typeOfClient);
-            
+
         } else {
             clearInterval(move);
 
@@ -181,7 +181,7 @@ function grabBeer (rzad, kolumna, interval) {
     if( $("tr:eq(" + rzadKlienta + ") td:eq(" + kolumna + ")").hasClass(typeOfClient)) {
         // console.log('ok');
         var StopMove =  $("tr:eq(" + rzadKlienta + ") td:eq(" + kolumna + ")").data('IntervalName');
-        
+
         clearInterval(StopMove);
         $("tr:eq(" + rzadKlienta + ") td:eq(" + kolumna + ")").removeClass(typeOfClient);
 
@@ -277,24 +277,26 @@ function gameOver () {
 
     musicTheme.pause();
 
- function gameOverMusic (score) {
-     if (score <= 50) {
-         musicGameOver = new Audio('gameover1.mp3');
-     } else if (score <= 100) {
-         musicGameOver = new Audio('gameover2.mp3');
-     } else if (score <= 150) {
-         musicGameOver = new Audio('gameover3.mp3');
-     } else if (score <= 250) {
-         musicGameOver = new Audio('gameover4.mp3');
-     } else if (score <= 350) {
-         musicGameOver = new Audio('gameover5.mp3');
-     } else {
-         musicGameOver = new Audio('gameover6.mp3');
-     }
-     musicGameOver.play();
- }
+    function gameOverMusic(score) {
+        if (score <= 50) {
+            musicGameOver = new Audio('gameover1.mp3');
+        } else if (score <= 100) {
+            musicGameOver = new Audio('gameover2.mp3');
+        } else if (score <= 150) {
+            musicGameOver = new Audio('gameover3.mp3');
+        } else if (score <= 250) {
+            musicGameOver = new Audio('gameover4.mp3');
+        } else if (score <= 350) {
+            musicGameOver = new Audio('gameover5.mp3');
+        } else {
+            musicGameOver = new Audio('gameover6.mp3');
+        }
+        musicGameOver.play();
+    }
+
     gameOverMusic(score);
-  
+
+
     chooseComment(score);
     clientTime = 500;
     nowaGra(1);
@@ -302,25 +304,28 @@ function gameOver () {
     score = 0;
     $('div.score').html('Score: ' + score);
 
-        $(document).off('keydown');
+    $(document).off('keydown');
+}
+$przyciskNowaGra.on('click', function(){
+    $('.apla-start').css({display: "none"});
+    $('.apla-loose').css({display: "none"});
+    $('.apla-loose-finalscore').css({display: "none"});
+    if (musicGameOver !== undefined) {
+        musicGameOver.pause();
     }
-    $przyciskNowaGra.on('click', function(){
-        $('.apla-start').css({display: "none"});
-        $('.apla-loose').css({display: "none"});
-        $('.apla-loose-finalscore').css({display: "none"});
 
-        $(".piwo, .barman, .barman-head, .client1, .client2, .client3, .client4").attr("class", "").addClass("cell");
+    $(".piwo, .barman, .barman-head, .client1, .client2, .client3, .client4").attr("class", "").addClass("cell");
 
-        musicTheme = new Audio('theme.mp3');
-        musicTheme.addEventListener('ended', function() {
-            this.currentTime = 0;
-            this.play();
-        }, false);
+    musicTheme = new Audio('theme.mp3');
+    musicTheme.addEventListener('ended', function() {
+        this.currentTime = 0;
+        this.play();
+    }, false);
 
-        musicTheme.play();
+    musicTheme.play();
 
-        addClient();
-        addBartender();
+    addClient();
+    addBartender();
 
         $(document).off('keydown').keydown(function(event){
             event.preventDefault();
