@@ -1,0 +1,76 @@
+body {
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: 400;
+    font-size: 1.3em;
+}
+
+body > .container {
+    padding: 80px 15px 0;
+}
+.container .text-muted {
+    margin: 20px 0;
+}
+
+a.navigation {
+    font-weight: 700;
+    padding: 49px;
+
+    height: 85px;
+}
+
+span.logo-planner {
+    font-family: 'Oswald', sans-serif;
+    color: #c3c3c3;
+    font-weight: 400;
+    font-size: 50px;
+}
+
+span.logo-fun {
+    font-family: 'Oswald', sans-serif;
+    color: #c3c3c3;
+    font-weight: 700;
+    font-size: 45px;
+}
+
+span.logo-ikon {
+    font-size: 50px;
+    color: #8cc63f;
+}
+
+.navbar-default {
+    background-color: #fff;
+    height: 86px;
+}
+
+.glyphicon-star-empty {
+    font-size: 1.2em;
+    color: #c3c3c3;
+}
+
+.star {
+    padding-top: 10px;
+}
+
+.star-fill {
+    color: #ffa400;
+}
+
+.list-element {
+    background-color: #fafafa;
+    border: solid 1px #8cc63f;
+    margin: 10px 0;
+    padding: 10px;
+    box-shadow: 0 0 6px #8cc63f;
+}
+
+.list-box {
+    border: solid 1px #b9b9b9;
+    padding: 10px;
+    min-height: 300px;
+}
+
+.ui-sortable-helper {
+    background-color: #f0f0f0;
+}
+
+
