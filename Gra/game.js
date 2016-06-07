@@ -95,11 +95,11 @@ $(document).ready(function () {
             }
         }, clientTime);
     }
-
+    var clientInterval =500;
     function addClient() {
         setInterval(function () {
             moveClient();
-        }, 700);
+        }, clientInterval);
 
     }
 
@@ -201,12 +201,16 @@ $(document).ready(function () {
             clientTime = 500;
         } else if (score <= 120) {
             clientTime = 350;
+            clientInterval = 100;
         } else if (score <= 170) {
             clientTime = 200;
+            clientInterval = 70;
         } else if (score <= 320) {
             clientTime = 150;
+            clientInterval=50;
         } else if (score <= 500) {
             clientTime = 100;
+            clientInterval=20;
         }
     }
 
@@ -299,6 +303,7 @@ $(document).ready(function () {
 
         chooseComment(score);
         clientTime = 500;
+        clientInterval = 500;
         nowaGra(1);
         clearAllIntervals();
         score = 0;
