@@ -32,20 +32,33 @@ $(document).ready(function () {
 
     var score = 0;
 
-    $("#zacznijgre").on("click", function () {
-        var $container,
-            $gameBoard,
-            $form = $(".form");
-        $form.css({
-            display: "none"
-        });
+    $('form').submit(function(event) {
+        event.preventDefault();
+        console.log('submit');
+        function isEmail(email) {
+            var regex = /^([a-zA-Z0-9_.+-])+\@(([a-zA-Z0-9-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+            return regex.test(email);
+        }
 
-        $container = $('#AfterBeer');
-        $gameBoard = createTable(20, 10);
-        $container.append($gameBoard);
-        $gameBoard.append('<div class="score">Score: ' + score);
+        if (!isEmail($('#email').val())) {
+            alert('To nie jest mail!');
+        } else {
 
-        newGame(0);
+
+            var $container,
+                $gameBoard,
+                $form = $(".form");
+            $form.css({
+                display: "none"
+            });
+
+            $container = $('#AfterBeer');
+            $gameBoard = createTable(20, 10);
+            $container.append($gameBoard);
+            $gameBoard.append('<div class="score">Score: ' + score);
+
+            newGame(0);
+        }
     });
 
     function createTable(width, height) {
