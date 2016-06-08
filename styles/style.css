@@ -15,9 +15,9 @@ header {
     background-color: #878787;
     padding: 5px 0;
     position: fixed;
-    left:0;
-    right:0;
-    top:0;
+    left: 0;
+    right: 0;
+    top: 0;
     z-index: 1000;
     max-width: 1920px;
     margin: 0 auto;
@@ -27,12 +27,12 @@ header {
     position: relative;
 }
 
-.nawigacja-funkcje{
+.navigation-functions {
     position: absolute;
     bottom: 0;
 }
 
-.punkt-nawigacji {
+.navigation-point {
     position: absolute;
     bottom: 80px;
 }
@@ -107,7 +107,7 @@ main {
 
 /*Zajawka*/
 
-.zajawka {
+.sneakPeak {
     position: relative;
     height: 600px;
     /*width: 100%;*/
@@ -115,7 +115,7 @@ main {
     margin: 0 auto;
 }
 
-.pod-zajawka {
+.pod-sneakPeak {
     padding-top: 200px;
     height: 400px;
     width: 100%;
@@ -125,17 +125,17 @@ main {
     text-align: center;
 }
 
-.zajawka-1 {
+.sneakPeak-1 {
     background-image: url("../images/fota-glowna.jpeg");
     margin: 0 auto;
 }
 
-.zajawka-2 {
+.sneakPeak-2 {
     background-image: url("../images/fota-glowna2.jpeg");
     margin: 0 auto;
 }
 
-.zajawka-3 {
+.sneakPeak-3 {
     background-image: url("../images/fota-glowna3.jpeg");
     margin: 0 auto;
 }
@@ -149,7 +149,7 @@ main {
     margin: 0 auto;
 }
 
-.tekstzajawka {
+.textSneakPeak {
     font-size: 90px;
     width: 100%;
     margin: auto;
@@ -158,19 +158,19 @@ main {
     font-weight: 300;
 }
 
-span.tekstzajawka {
+span.textSneakPeak {
     font-size: 68px;
     font-weight: 700;
 }
 
-.tekstzajawka.male {
+.textSneakPeak.small {
     font-size: 30px;
     font-weight: 400;
     letter-spacing: 1px;
     line-height: 120%;
 }
 
-.zajawka a {
+.sneakPeak a {
 
     display: block;
     position: relative;
@@ -187,7 +187,7 @@ span.tekstzajawka {
     padding: 15px;
 }
 
-.zajawka a:hover {
+.sneakPeak a:hover {
     color: #e9e5ea;
 }
 
@@ -204,12 +204,15 @@ span.tekstzajawka {
 .swiec {
     color: #8cc63f;
 }
+
 .nieswiec {
     color: #e9e5ea;
 }
+
 .ukryte {
     opacity: 0;
 }
+
 /*Koniec zajawki*/
 
 /*Funkcje*/
@@ -314,14 +317,14 @@ span.tekstzajawka {
 
 /*Formularz*/
 
-.formularz {
+.form {
     height: 350px;
     background-color: #878787;
     max-width: 1920px;
     margin: 0 auto;
 }
 
-.formularz form {
+.form form {
     width: 400px;
     margin: auto;
     padding: 15px;
@@ -331,7 +334,7 @@ span.tekstzajawka {
     background-color: #5e5e5e;
 }
 
-.formularz form input {
+.form form input {
     display: inline-block;
     padding: 15px;
     border: hidden;
@@ -345,7 +348,7 @@ span.tekstzajawka {
     width: 240px;
 }
 
-.formularz form button {
+.form form button {
     padding: 15px;
     background-color: #e3e3e3;
     border: hidden;
@@ -355,11 +358,11 @@ span.tekstzajawka {
     float: right;
 }
 
-.formularz form button:hover {
+.form form button:hover {
     background-color: #d6d6d6;
 }
 
-.tekstformularza {
+.formText {
     width: 500px;
     margin: auto;
     text-align: center;
@@ -375,7 +378,7 @@ span.tekstzajawka {
 
 /*Stopka*/
 
-.stopka {
+.footer {
     font-size: 80%;
     text-align: center;
     margin: 0 0 20px 0;
@@ -406,13 +409,13 @@ span.tekstzajawka {
     height: 30px;
     vertical-align: -5px;
 }
+
 /*GRA*/
 
 .cell {
     width: 50px;
     height: 50px;
 }
-
 
 .tableGra {
     position: relative;
@@ -454,6 +457,7 @@ span.tekstzajawka {
     background-repeat: no-repeat;
     background-size: cover;
 }
+
 .barman-head {
     background-image: url("../images/game_barman_head.png");
     background-repeat: no-repeat;

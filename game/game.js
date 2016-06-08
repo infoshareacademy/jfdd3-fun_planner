@@ -19,15 +19,15 @@ $(document).ready(function () {
     };
 
 
-    var $przyciskNowaGra = $('<button class="button-new-game">').html("Nowa Gra");
+    var $buttonNewGame = $('<button class="button-new-game">').html("Nowa Gra");
 
-    var $BarmanPoz1,
-        $BarmanPoz2,
-        $BarmanPoz3,
+    var $BarmanPos1,
+        $BarmanPos2,
+        $BarmanPos3,
         $Position,
-        $BarmanPoz1Head,
-        $BarmanPoz2Head,
-        $BarmanPoz3Head,
+        $BarmanPos1Head,
+        $BarmanPos2Head,
+        $BarmanPos3Head,
         $PositionHead;
 
     var score = 0;
@@ -35,7 +35,7 @@ $(document).ready(function () {
     $("#zacznijgre").on("click", function () {
         var $container,
             $gameBoard,
-            $form = $(".formularz");
+            $form = $(".form");
         $form.css({
             display: "none"
         });
@@ -45,7 +45,7 @@ $(document).ready(function () {
         $container.append($gameBoard);
         $gameBoard.append('<div class="score">Score: ' + score);
 
-        nowaGra(0);
+        newGame(0);
     });
 
     function createTable(width, height) {
@@ -57,7 +57,7 @@ $(document).ready(function () {
             for (var x = 0; x < width; x += 1) {
                 $td = $('<td>');
                 $td.addClass('cell').attr('x', x).attr('y', y);
-                //$td.attr("id",y+'x'+x);
+
                 $tr.append($td);
             }
             $table.append($tr);
@@ -95,7 +95,9 @@ $(document).ready(function () {
             }
         }, clientTime);
     }
-    var clientInterval =500;
+
+    var clientInterval = 500;
+
     function addClient() {
         setInterval(function () {
             moveClient();
@@ -104,14 +106,14 @@ $(document).ready(function () {
     }
 
     function addBartender() {
-        $BarmanPoz1 = $('td[x=' + 18 + '][y=' + 8 + ']');
-        $BarmanPoz2 = $('td[x=' + 18 + '][y=' + 5 + ']');
-        $BarmanPoz3 = $('td[x=' + 18 + '][y=' + 2 + ']');
-        $BarmanPoz1Head = $('td[x=' + 18 + '][y=' + 7 + ']');
-        $BarmanPoz2Head = $('td[x=' + 18 + '][y=' + 4 + ']');
-        $BarmanPoz3Head = $('td[x=' + 18 + '][y=' + 1 + ']');
-        $Position = $BarmanPoz1;
-        $PositionHead = $BarmanPoz1Head;
+        $BarmanPos1 = $('td[x=' + 18 + '][y=' + 8 + ']');
+        $BarmanPos2 = $('td[x=' + 18 + '][y=' + 5 + ']');
+        $BarmanPos3 = $('td[x=' + 18 + '][y=' + 2 + ']');
+        $BarmanPos1Head = $('td[x=' + 18 + '][y=' + 7 + ']');
+        $BarmanPos2Head = $('td[x=' + 18 + '][y=' + 4 + ']');
+        $BarmanPos3Head = $('td[x=' + 18 + '][y=' + 1 + ']');
+        $Position = $BarmanPos1;
+        $PositionHead = $BarmanPos1Head;
         $Position.addClass('barman');
         $PositionHead.addClass('barman-head');
     }
@@ -135,15 +137,15 @@ $(document).ready(function () {
         $Position.removeClass('barman');
         $PositionHead.removeClass('barman-head');
         switch ($Position) {
-            case $BarmanPoz1:
-                $Position = $BarmanPoz2;
-                $PositionHead = $BarmanPoz2Head;
+            case $BarmanPos1:
+                $Position = $BarmanPos2;
+                $PositionHead = $BarmanPos2Head;
                 break;
-            case $BarmanPoz2:
-                $Position = $BarmanPoz3;
-                $PositionHead = $BarmanPoz3Head;
+            case $BarmanPos2:
+                $Position = $BarmanPos3;
+                $PositionHead = $BarmanPos3Head;
                 break;
-            case $BarmanPoz3:
+            case $BarmanPos3:
                 console.log('Wyzej sie nie da!');
                 break;
         }
@@ -155,38 +157,38 @@ $(document).ready(function () {
         $Position.removeClass('barman');
         $PositionHead.removeClass('barman-head');
         switch ($Position) {
-            case $BarmanPoz1:
+            case $BarmanPos1:
                 console.log('Nizej sie nie da');
                 break;
-            case $BarmanPoz2:
-                $Position = $BarmanPoz1;
-                $PositionHead = $BarmanPoz1Head;
+            case $BarmanPos2:
+                $Position = $BarmanPos1;
+                $PositionHead = $BarmanPos1Head;
                 break;
-            case $BarmanPoz3:
-                $Position = $BarmanPoz2;
-                $PositionHead = $BarmanPoz2Head;
+            case $BarmanPos3:
+                $Position = $BarmanPos2;
+                $PositionHead = $BarmanPos2Head;
                 break;
         }
         $Position.addClass('barman');
         $PositionHead.addClass('barman-head');
     }
 
-    function grabBeer(rzad, kolumna, interval) {
-        var rzadKlienta = rzad - 1,
+    function grabBeer(row, column, interval) {
+        var clientRow = row - 1,
             hitClient = false;
 
-        var typeOfClient = $("tr:eq(" + rzadKlienta + ") td:eq(" + kolumna + ")").data('ClientName');
+        var typeOfClient = $("tr:eq(" + clientRow + ") td:eq(" + column + ")").data('ClientName');
 
-        // console.log(rzadKlienta + ', ' + kolumna );
-        if ($("tr:eq(" + rzadKlienta + ") td:eq(" + kolumna + ")").hasClass(typeOfClient)) {
-            // console.log('ok');
-            var StopMove = $("tr:eq(" + rzadKlienta + ") td:eq(" + kolumna + ")").data('IntervalName');
+
+        if ($("tr:eq(" + clientRow + ") td:eq(" + column + ")").hasClass(typeOfClient)) {
+
+            var StopMove = $("tr:eq(" + clientRow + ") td:eq(" + column + ")").data('IntervalName');
 
             clearInterval(StopMove);
-            $("tr:eq(" + rzadKlienta + ") td:eq(" + kolumna + ")").removeClass(typeOfClient);
+            $("tr:eq(" + clientRow + ") td:eq(" + column + ")").removeClass(typeOfClient);
 
             clearInterval(interval);
-            $("tr:eq(" + rzad + ") td:eq(" + kolumna + ")").removeClass('piwo');
+            $("tr:eq(" + row + ") td:eq(" + column + ")").removeClass('piwo');
             hitClient = true;
             addPoint();
         }
@@ -207,10 +209,10 @@ $(document).ready(function () {
             clientInterval = 70;
         } else if (score <= 320) {
             clientTime = 150;
-            clientInterval=50;
+            clientInterval = 50;
         } else if (score <= 500) {
             clientTime = 100;
-            clientInterval=20;
+            clientInterval = 20;
         }
     }
 
@@ -220,7 +222,7 @@ $(document).ready(function () {
         var X = 18;
         var stopBeer;
 
-        musicBeer = new Audio('beer.mp3');
+        musicBeer = new Audio('game/music/beer.mp3');
         musicBeer.play();
 
         var piwo = setInterval(function () {
@@ -236,19 +238,19 @@ $(document).ready(function () {
                 clearInterval(piwo);
 
                 $("tr:eq(" + Y + ") td:eq(" + X + ")").removeClass('piwo');
-                crashBeer = new Audio('crash.mp3');
+                crashBeer = new Audio('game/music/crash.mp3');
 
                 crashBeer.play();
                 gameOver();
             }
         }, 70);
-        console.log('lejToPIWO');
+
     }
 
-    function nowaGra(status) {
+    function newGame(status) {
         if (status === 0) {
             $('.tableGra').append('<div class="apla-start">');
-            $('.apla-start').append($przyciskNowaGra);
+            $('.apla-start').append($buttonNewGame);
         }
         if (status === 1) {
             $('.tableGra').append('<div class="apla-loose">');
@@ -257,8 +259,8 @@ $(document).ready(function () {
 
             $('.apla-loose').append('<div class="apla-loose-finalscore">');
             $('.apla-loose-finalscore').append($('div.score').text());
-            $przyciskNowaGra.addClass('button-end-game');
-            $('.apla-loose').append($przyciskNowaGra);
+            $buttonNewGame.addClass('button-end-game');
+            $('.apla-loose').append($buttonNewGame);
         }
     }
 
@@ -283,17 +285,17 @@ $(document).ready(function () {
 
         function gameOverMusic(score) {
             if (score <= 50) {
-                musicGameOver = new Audio('gameover1.mp3');
+                musicGameOver = new Audio('game/music/gameover1.mp3');
             } else if (score <= 100) {
-                musicGameOver = new Audio('gameover2.mp3');
+                musicGameOver = new Audio('game/music/gameover2.mp3');
             } else if (score <= 150) {
-                musicGameOver = new Audio('gameover3.mp3');
+                musicGameOver = new Audio('game/music/gameover3.mp3');
             } else if (score <= 250) {
-                musicGameOver = new Audio('gameover4.mp3');
+                musicGameOver = new Audio('game/music/gameover4.mp3');
             } else if (score <= 350) {
-                musicGameOver = new Audio('gameover5.mp3');
+                musicGameOver = new Audio('game/music/gameover5.mp3');
             } else {
-                musicGameOver = new Audio('gameover6.mp3');
+                musicGameOver = new Audio('game/music/gameover6.mp3');
             }
             musicGameOver.play();
         }
@@ -304,7 +306,7 @@ $(document).ready(function () {
         chooseComment(score);
         clientTime = 500;
         clientInterval = 500;
-        nowaGra(1);
+        newGame(1);
         clearAllIntervals();
         score = 0;
         $('div.score').html('Score: ' + score);
@@ -312,7 +314,7 @@ $(document).ready(function () {
         $(document).off('keydown');
     }
 
-    $przyciskNowaGra.on('click', function () {
+    $buttonNewGame.on('click', function () {
         $('.apla-start').css({display: "none"});
         $('.apla-loose').css({display: "none"});
         $('.apla-loose-finalscore').css({display: "none"});
@@ -322,7 +324,7 @@ $(document).ready(function () {
 
         $(".piwo, .barman, .barman-head, .client1, .client2, .client3, .client4").attr("class", "").addClass("cell");
 
-        musicTheme = new Audio('theme.mp3');
+        musicTheme = new Audio('game/music/theme.mp3');
         musicTheme.addEventListener('ended', function () {
             this.currentTime = 0;
             this.play();
