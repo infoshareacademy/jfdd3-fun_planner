@@ -239,7 +239,7 @@ span.textSneakPeak {
     color: #878787;
     padding: 20px 30px;
     vertical-align: top;
-    text-align: justify;
+    text-align: left;
 }
 
 .functions-ikona {
@@ -265,7 +265,7 @@ span.textSneakPeak {
     display: inline-block;
     vertical-align: top;
     padding: 50px 20px;
-    text-align: justify;
+    text-align: left;
     margin: auto;
 }
 
