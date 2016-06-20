@@ -41,7 +41,7 @@ $(document).ready(function () {
         }
 
         if (!isEmail($('#email').val())) {
-            $('#email').val('Nie cwaniakuj, podaj prawdziwy email');
+            $('#email').val('Nie cwaniakuj, podaj prawdziwy e-mail');
         } else {
 
 
